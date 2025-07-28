@@ -5,10 +5,14 @@
             <!-- Logo et Description -->
             <div class="col-span-1 md:col-span-2">
                 <div class="flex items-center mb-6">
-                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
-                        <i class="fas fa-balance-scale text-white text-xl"></i>
+                    <div class="w-10 h-10  rounded-lg flex items-center justify-center" >
+                        <img src="{{asset('img/global-gestion-logo-01.png')}}" alt="Logo IMH" class="w-8 h-8 object-contain">
                     </div>
-                    <span class="ml-3 text-2xl font-bold">Global Gestion</span>
+             <span class="ml-1 text-xl font-bold">
+    <span style="color: #245fa0;">Global</span> 
+    <span style="color: #fe7a36;">Gestion</span><sup style="color: #fe7a36;">+</sup>
+</span>
+                </a>
                 </div>
                 <p class="text-gray-400 mb-6 max-w-md">
                     Cabinet d'expertise comptable, juridique et fiscal à Marrakech. 
@@ -65,9 +69,9 @@
                     <h4 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-3">Contact</h4>
                     <div class="space-y-2 text-gray-400 text-sm">
                         <p><i class="fas fa-map-marker-alt mr-2"></i>123 Avenue Mohammed V, Marrakech 40000</p>
-                        <p><i class="fas fa-phone mr-2"></i>+212 5 24 XX XX XX</p>
+                        <p><i class="fas fa-phone mr-2"></i>+212.5.24.31.23.31</p>
                         <p><i class="fas fa-envelope mr-2"></i>contact@global-gestion.ma</p>
-                        <p><i class="fas fa-fax mr-2"></i>+212 5 24 XX XX XX</p>
+                        <p><i class="fas fa-fax mr-2"></i>+212.6.20.30.76.06</p>
                     </div>
                 </div>
                 

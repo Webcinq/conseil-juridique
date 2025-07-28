@@ -341,7 +341,7 @@
 @push('scripts')
 <script>
     function openChat() {
-        alert('Chat en ligne bientôt disponible!\nEn attendant, contactez-nous par téléphone au +212 5 24 XX XX XX ou par email à contact@global-gestion.ma');
+        alert('Chat en ligne bientôt disponible!\nEn attendant, contactez-nous par téléphone au +212.6.20.30.76.06 ');
     }
 </script>
 @endpush 

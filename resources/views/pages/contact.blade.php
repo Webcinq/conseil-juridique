@@ -136,7 +136,7 @@
                                 </div>
                                 <div>
                                     <h3 class="font-semibold text-gray-900 mb-1">Adresse</h3>
-                                    <p class="text-gray-600">123 Avenue Mohammed V<br>Marrakech 40000, Maroc</p>
+                                    <p class="text-gray-600">123 Avenue Allal al fassi<br>Marrakech 40000, Maroc</p>
                                 </div>
                             </div>
                             
@@ -146,8 +146,8 @@
                                 </div>
                                 <div>
                                     <h3 class="font-semibold text-gray-900 mb-1">Téléphone</h3>
-                                    <p class="text-gray-600">+212 5 24 XX XX XX</p>
-                                    <p class="text-gray-600">+212 6 XX XX XX XX (Mobile)</p>
+                                    <p class="text-gray-600">+212.5.24.31.23.31</p>
+                                    <p class="text-gray-600">+212.6.20.30.76.06 (Mobile)</p>
                                 </div>
                             </div>
                             
@@ -182,7 +182,7 @@
                                 </div>
                                 <div>
                                     <h3 class="font-semibold text-gray-900 mb-1">Fax</h3>
-                                    <p class="text-gray-600">+212 5 24 XX XX XX</p>
+                                    <p class="text-gray-600">+212.5.24.31.23.31</p>
                                 </div>
                             </div>
                         </div>
