@@ -25,6 +25,7 @@ jobs:
         local-dir: ./
         dangerous-clean-slate: false
         exclude: |
+            .git
             **/storage/** 
             **/.git**/
             **/node_modules/**
