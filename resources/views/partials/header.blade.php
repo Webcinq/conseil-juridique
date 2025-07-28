@@ -91,7 +91,19 @@
         <div id="mobile-menu" class="hidden md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
                 <a href="{{ route('accueil') }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-custom-blue">Accueil</a>
-                <a href="{{ route('expertises.index') }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-custom-blue">Nos Expertises</a>
+<div class="border-t">
+    <button onclick="toggleMobileExpertises()" class="w-full flex justify-between items-center px-3 py-2 text-base font-medium text-gray-700 hover:text-custom-blue focus:outline-none">
+        Nos Expertises <i class="fas fa-chevron-down"></i>
+    </button>
+    <div id="mobile-expertises-menu" class="hidden pl-6 space-y-1">
+        <a href="{{ route('gestion-comptable') }}" class="block px-3 py-2 text-gray-600 hover:text-custom-blue"><i class="fas fa-calculator mr-2"></i>Gestion Comptable</a>
+        <a href="{{ route('conseil-juridique') }}" class="block px-3 py-2 text-gray-600 hover:text-custom-blue"><i class="fas fa-gavel mr-2"></i>Conseil Juridique</a>
+        <a href="{{ route('conseil-fiscal') }}" class="block px-3 py-2 text-gray-600 hover:text-custom-blue"><i class="fas fa-file-invoice-dollar mr-2"></i>Conseil Fiscal</a>
+        <a href="{{ route('entrepreneuriat') }}" class="block px-3 py-2 text-gray-600 hover:text-custom-blue"><i class="fas fa-lightbulb mr-2"></i>Conseil en Entrepreneuriat</a>
+        <a href="{{ route('recrutement-rh') }}" class="block px-3 py-2 text-gray-600 hover:text-custom-blue"><i class="fas fa-users mr-2"></i>Recrutement & RH</a>
+        <a href="{{ route('marketing-digital') }}" class="block px-3 py-2 text-gray-600 hover:text-custom-blue"><i class="fas fa-chart-line mr-2"></i>Marketing Digital</a>
+    </div>
+</div>
                 <a href="{{ route('about') }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-custom-blue">À propos</a>
                 <a href="{{ route('blog.index') }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-custom-blue">Blog</a>
                 <a href="{{ route('contact') }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-custom-blue">Contact</a>
@@ -100,3 +112,12 @@
         </div>
     </div>
 </nav>
+<script>
+function toggleMobileMenu() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+}
+
+function toggleMobileExpertises() {
+    document.getElementById('mobile-expertises-menu').classList.toggle('hidden');
+}
+</script>

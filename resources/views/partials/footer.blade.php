@@ -68,7 +68,7 @@
                 <div>
                     <h4 class="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-3">Contact</h4>
                     <div class="space-y-2 text-gray-400 text-sm">
-                        <p><i class="fas fa-map-marker-alt mr-2"></i>123 Avenue Mohammed V, Marrakech 40000</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>123 Avenue Allal Al fassi, Marrakech 40000</p>
                         <p><i class="fas fa-phone mr-2"></i>+212.5.24.31.23.31</p>
                         <p><i class="fas fa-envelope mr-2"></i>contact@global-gestion.ma</p>
                         <p><i class="fas fa-fax mr-2"></i>+212.6.20.30.76.06</p>
