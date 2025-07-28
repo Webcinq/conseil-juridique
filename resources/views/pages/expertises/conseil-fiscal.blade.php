@@ -9,9 +9,9 @@
     <div class="bg-gray-50 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex items-center space-x-2 text-sm">
-                <a href="{{ route('accueil') }}" class="text-blue-600 hover:text-blue-800">Accueil</a>
+                <a href="{{ route('accueil') }}" class="text-custom-blue hover:text-blue-800">Accueil</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
-                <a href="{{ route('expertises.index') }}" class="text-blue-600 hover:text-blue-800">Nos Expertises</a>
+                <a href="{{ route('expertises.index') }}" class="text-custom-blue hover:text-blue-800">Nos Expertises</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
                 <span class="text-gray-600">Conseil Fiscal</span>
             </nav>
@@ -154,7 +154,7 @@
                                 <span>Conformité légale</span>
                             </li>
                         </ul>
-                        <a href="{{ route('declarations-fiscales') }}" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        <a href="{{ route('declarations-fiscales') }}" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                             En savoir plus <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -167,7 +167,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
+                            <i class="fas fa-chart-line text-custom-blue text-2xl"></i>
                         </div>
                         <h3 class="font-bold text-gray-900 mb-2">Une gestion optimale de votre fiscalité</h3>
                         <p class="text-gray-600 text-sm">Optimisation des charges fiscales et respect des obligations légales</p>
@@ -277,19 +277,19 @@
                     <p class="text-gray-600 mb-6">Anticiper les risques fiscaux est essentiel pour la pérennité de votre entreprise. C'est pourquoi nous mettons à votre disposition :</p>
                     <ul class="space-y-3">
                         <li class="flex items-start">
-                            <i class="fas fa-lightbulb text-blue-600 mr-3 mt-1"></i>
+                            <i class="fas fa-lightbulb text-custom-blue mr-3 mt-1"></i>
                             <span class="text-gray-700">Des séances de sensibilisation pratiques pour mieux comprendre les enjeux fiscaux actuels</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-graduation-cap text-blue-600 mr-3 mt-1"></i>
+                            <i class="fas fa-graduation-cap text-custom-blue mr-3 mt-1"></i>
                             <span class="text-gray-700">Des programmes de formation personnalisés sur les aspects clés de la fiscalité</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-search text-blue-600 mr-3 mt-1"></i>
+                            <i class="fas fa-search text-custom-blue mr-3 mt-1"></i>
                             <span class="text-gray-700">Des missions d'audit fiscal approfondies pour évaluer et prévenir les risques</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-chart-bar text-blue-600 mr-3 mt-1"></i>
+                            <i class="fas fa-chart-bar text-custom-blue mr-3 mt-1"></i>
                             <span class="text-gray-700">Une analyse détaillée du risque fiscal lié à des montages complexes</span>
                         </li>
                     </ul>

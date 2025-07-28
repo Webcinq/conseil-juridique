@@ -8,7 +8,7 @@
     <div class="bg-gray-50 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex items-center space-x-2 text-sm">
-                <a href="{{ route('accueil') }}" class="text-blue-600 hover:text-blue-800">Accueil</a>
+                <a href="{{ route('accueil') }}" class="text-custom-blue hover:text-blue-800">Accueil</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
                 <span class="text-gray-600">Nos Expertises</span>
             </nav>
@@ -20,7 +20,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <div class="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-cogs text-blue-600 text-3xl"></i>
+                    <i class="fas fa-cogs text-custom-blue text-3xl"></i>
                 </div>
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Nos Expertises</h1>
                 <p class="text-xl text-gray-600 max-w-4xl mx-auto">
@@ -66,7 +66,7 @@
                                 Révision comptable
                             </li>
                         </ul>
-                        <a href="{{ route('gestion-comptable') }}" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors group-hover:text-blue-700">
+                        <a href="{{ route('gestion-comptable') }}" class="inline-flex items-center text-custom-blue font-semibold hover:text-blue-800 transition-colors group-hover:text-blue-700">
                             En savoir plus 
                             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </a>
@@ -104,7 +104,7 @@
                                 Médiation & arbitrage
                             </li>
                         </ul>
-                        <a href="{{ route('conseil-juridique') }}" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors group-hover:text-blue-700">
+                        <a href="{{ route('conseil-juridique') }}" class="inline-flex items-center text-custom-blue font-semibold hover:text-blue-800 transition-colors group-hover:text-blue-700">
                             En savoir plus 
                             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </a>
@@ -142,7 +142,7 @@
                                 Optimisation fiscale
                             </li>
                         </ul>
-                        <a href="{{ route('conseil-fiscal') }}" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors group-hover:text-blue-700">
+                        <a href="{{ route('conseil-fiscal') }}" class="inline-flex items-center text-custom-blue font-semibold hover:text-blue-800 transition-colors group-hover:text-blue-700">
                             En savoir plus 
                             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </a>
@@ -180,7 +180,7 @@
                                 Recherche de financements
                             </li>
                         </ul>
-                        <a href="{{ route('entrepreneuriat') }}" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors group-hover:text-blue-700">
+                        <a href="{{ route('entrepreneuriat') }}" class="inline-flex items-center text-custom-blue font-semibold hover:text-blue-800 transition-colors group-hover:text-blue-700">
                             En savoir plus 
                             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </a>
@@ -218,7 +218,7 @@
                                 Formation des équipes
                             </li>
                         </ul>
-                        <a href="{{ route('recrutement-rh') }}" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors group-hover:text-blue-700">
+                        <a href="{{ route('recrutement-rh') }}" class="inline-flex items-center text-custom-blue font-semibold hover:text-blue-800 transition-colors group-hover:text-blue-700">
                             En savoir plus 
                             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </a>
@@ -256,7 +256,7 @@
                                 Stratégie digitale
                             </li>
                         </ul>
-                        <a href="{{ route('marketing-digital') }}" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors group-hover:text-blue-700">
+                        <a href="{{ route('marketing-digital') }}" class="inline-flex items-center text-custom-blue font-semibold hover:text-blue-800 transition-colors group-hover:text-blue-700">
                             En savoir plus 
                             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </a>
@@ -279,7 +279,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-award text-blue-600 text-2xl"></i>
+                        <i class="fas fa-award text-custom-blue text-2xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-2">Plus de 25 ans d'expérience</h3>
                     <p class="text-gray-600 text-sm">Une expertise reconnue auprès des TPE, PME et professions libérales.</p>

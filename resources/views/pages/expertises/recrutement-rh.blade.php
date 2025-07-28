@@ -9,9 +9,9 @@
     <div class="bg-gray-50 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex items-center space-x-2 text-sm">
-                <a href="{{ route('accueil') }}" class="text-blue-600 hover:text-blue-800">Accueil</a>
+                <a href="{{ route('accueil') }}" class="text-custom-blue hover:text-blue-800">Accueil</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
-                <a href="{{ route('expertises.index') }}" class="text-blue-600 hover:text-blue-800">Nos Expertises</a>
+                <a href="{{ route('expertises.index') }}" class="text-custom-blue hover:text-blue-800">Nos Expertises</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
                 <span class="text-gray-600">Recrutement & Management RH</span>
             </nav>
@@ -157,7 +157,7 @@
 
                     <div class="text-center p-6 bg-gray-50 rounded-lg">
                         <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-comments text-blue-600 text-xl"></i>
+                            <i class="fas fa-comments text-custom-blue text-xl"></i>
                         </div>
                         <h3 class="font-bold text-gray-900 mb-2">Médiation Sociale</h3>
                         <p class="text-gray-600 text-sm">Résolution des conflits internes et amélioration de la communication</p>
@@ -197,7 +197,7 @@
                 <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                            <i class="fas fa-hospital text-blue-600 text-xl"></i>
+                            <i class="fas fa-hospital text-custom-blue text-xl"></i>
                         </div>
                         <h3 class="text-lg font-bold text-gray-900">Professions Libérales</h3>
                     </div>
@@ -276,7 +276,7 @@
 
                         <div class="flex items-start">
                             <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                <i class="fas fa-clock text-blue-600"></i>
+                                <i class="fas fa-clock text-custom-blue"></i>
                             </div>
                             <div>
                                 <h3 class="font-bold text-gray-900 mb-2">Gain de Temps</h3>
@@ -324,7 +324,7 @@
                     <!-- Stats -->
                     <div class="grid grid-cols-2 gap-6">
                         <div class="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg">
-                            <div class="text-3xl font-bold text-blue-600 mb-2">95%</div>
+                            <div class="text-3xl font-bold text-custom-blue mb-2">95%</div>
                             <p class="text-sm text-gray-600">Taux de satisfaction client</p>
                         </div>
                         <div class="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-lg">

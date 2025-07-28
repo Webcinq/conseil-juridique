@@ -1,8 +1,19 @@
+/* ===== 1. MODIFIER resources/css/app.css ===== */
+
 @import 'tailwindcss';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
+
+/* Variables CSS pour vos couleurs personnalisées */
+:root {
+    --primary-blue: #245fa0;
+    --secondary-orange: #fe7a36;
+    --primary-blue-dark: #1e3a5f;
+    --secondary-orange-dark: #e55a2b;
+}
+
 @keyframes pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: .5; }
@@ -14,6 +25,7 @@
 
 .delay-500 { animation-delay: 0.5s; }
 .delay-1000 { animation-delay: 1s; }
+
 .course-card {
     transition: all 0.3s ease;
     transform: translateY(0);
@@ -21,11 +33,11 @@
 
 .course-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(36, 95, 160, 0.1), 0 10px 10px -5px rgba(36, 95, 160, 0.04);
 }
 
 .progress-bar {
-    background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(90deg, #245fa0 0%, #fe7a36 100%);
 }
 
 .category-badge {
@@ -37,11 +49,62 @@
 }
 
 .filter-active {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #245fa0 0%, #fe7a36 100%);
     color: white;
 }
 
 /* Animation pour les étoiles */
 .star-rating {
-    color: #fbbf24;
+    color: #fe7a36;
+}
+
+/* Classes utilitaires personnalisées */
+.bg-custom-blue { background-color: #245fa0; }
+.bg-custom-orange { background-color: #fe7a36; }
+.text-custom-blue { color: #245fa0; }
+.text-custom-orange { color: #fe7a36; }
+.border-custom-blue { border-color: #245fa0; }
+.border-custom-orange { border-color: #fe7a36; }
+
+.gradient-bg-custom {
+    background: linear-gradient(135deg, #245fa0 0%, #fe7a36 100%);
+}
+
+.btn-custom-primary {
+    background-color: #245fa0;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-primary:hover {
+    background-color: #1e3a5f;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(36, 95, 160, 0.2);
+}
+
+.btn-custom-secondary {
+    background-color: #fe7a36;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-secondary:hover {
+    background-color: #e55a2b;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(254, 122, 54, 0.2);
+}
+
+.card-hover-custom {
+    transition: all 0.3s ease;
+}
+
+.card-hover-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(36, 95, 160, 0.1);
 }

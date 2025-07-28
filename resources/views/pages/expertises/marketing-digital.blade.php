@@ -9,9 +9,9 @@
     <div class="bg-gray-50 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex items-center space-x-2 text-sm">
-                <a href="{{ route('accueil') }}" class="text-blue-600 hover:text-blue-800">Accueil</a>
+                <a href="{{ route('accueil') }}" class="text-custom-blue hover:text-blue-800">Accueil</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
-                <a href="{{ route('expertises.index') }}" class="text-blue-600 hover:text-blue-800">Nos Expertises</a>
+                <a href="{{ route('expertises.index') }}" class="text-custom-blue hover:text-blue-800">Nos Expertises</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
                 <span class="text-gray-600">Stratégie & Marketing Digital</span>
             </nav>
@@ -173,7 +173,7 @@
 
                     <div class="text-center p-6 bg-gray-50 rounded-lg">
                         <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-mobile-alt text-blue-600 text-xl"></i>
+                            <i class="fas fa-mobile-alt text-custom-blue text-xl"></i>
                         </div>
                         <h3 class="font-bold text-gray-900 mb-2">Applications Mobiles</h3>
                         <p class="text-gray-600 text-sm">Développement d'applications mobiles natives et hybrides</p>
@@ -253,7 +253,7 @@
                 <!-- Développement Web -->
                 <div class="bg-white rounded-xl shadow-lg p-6 text-center">
                     <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-code text-blue-600 text-2xl"></i>
+                        <i class="fas fa-code text-custom-blue text-2xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-4">Développement Web</h3>
                     <div class="space-y-2 text-sm text-gray-600">
@@ -327,7 +327,7 @@
                     <div class="space-y-4">
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-600">Trafic organique</span>
-                            <span class="text-2xl font-bold text-blue-600">+340%</span>
+                            <span class="text-2xl font-bold text-custom-blue">+340%</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-600">Conversions</span>
@@ -355,7 +355,7 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-600">Visibilité locale</span>
-                            <span class="text-2xl font-bold text-blue-600">+200%</span>
+                            <span class="text-2xl font-bold text-custom-blue">+200%</span>
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-600">Engagement social</span>
@@ -383,7 +383,7 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-600">Autorité domaine</span>
-                            <span class="text-2xl font-bold text-blue-600">+120%</span>
+                            <span class="text-2xl font-bold text-custom-blue">+120%</span>
                         </div>
                     </div>
                 </div>
@@ -466,7 +466,7 @@
                         <h3 class="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
                         <p class="text-gray-600">Idéal pour les petites entreprises</p>
                         <div class="mt-4">
-                            <span class="text-4xl font-bold text-blue-600">À partir de</span>
+                            <span class="text-4xl font-bold text-custom-blue">À partir de</span>
                             <span class="text-2xl font-bold text-gray-900 ml-2">15,000 DH</span>
                         </div>
                     </div>
@@ -506,7 +506,7 @@
                         <h3 class="text-2xl font-bold text-gray-900 mb-2">Professional</h3>
                         <p class="text-gray-600">Pour une croissance accélérée</p>
                         <div class="mt-4">
-                            <span class="text-4xl font-bold text-blue-600">À partir de</span>
+                            <span class="text-4xl font-bold text-custom-blue">À partir de</span>
                             <span class="text-2xl font-bold text-gray-900 ml-2">35,000 DH</span>
                         </div>
                     </div>

@@ -9,9 +9,9 @@
     <div class="bg-gray-50 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex items-center space-x-2 text-sm">
-                <a href="{{ route('accueil') }}" class="text-blue-600 hover:text-blue-800">Accueil</a>
+                <a href="{{ route('accueil') }}" class="text-custom-blue hover:text-blue-800">Accueil</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
-                <a href="{{ route('conseil-fiscal') }}" class="text-blue-600 hover:text-blue-800">Conseil Fiscal</a>
+                <a href="{{ route('conseil-fiscal') }}" class="text-custom-blue hover:text-blue-800">Conseil Fiscal</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
                 <span class="text-gray-600">Contentieux Fiscal</span>
             </nav>
@@ -57,7 +57,7 @@
                     <div class="space-y-4">
                         <div class="flex items-start">
                             <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                <i class="fas fa-file-alt text-blue-600"></i>
+                                <i class="fas fa-file-alt text-custom-blue"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-gray-900 mb-2">Démarches de Régularisation</h4>
@@ -117,7 +117,7 @@
                 </p>
                 <div class="flex items-center justify-center space-x-8">
                     <div class="text-center">
-                        <i class="fas fa-map-marker-alt text-blue-600 text-2xl mb-2"></i>
+                        <i class="fas fa-map-marker-alt text-custom-blue text-2xl mb-2"></i>
                         <p class="font-semibold text-gray-900">Marrakech</p>
                         <p class="text-gray-600 text-sm">Zone principale</p>
                     </div>
@@ -217,7 +217,7 @@
                 <!-- Étude du Dossier -->
                 <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
                     <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-search text-blue-600 text-2xl"></i>
+                        <i class="fas fa-search text-custom-blue text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Étude du Dossier</h3>
                     <p class="text-gray-600 mb-4">Analyse complète et méticuleuse de votre situation fiscale</p>
@@ -368,7 +368,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-map-marker-alt text-blue-600 text-2xl"></i>
+                        <i class="fas fa-map-marker-alt text-custom-blue text-2xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-3">Intervention Locale</h3>
                     <p class="text-gray-600 text-sm">

@@ -50,9 +50,9 @@
                 
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#accueil" class="text-blue-600 hover:text-blue-800 px-3 py-2 text-sm font-medium transition-colors">Accueil</a>
+                        <a href="#accueil" class="text-custom-blue hover:text-blue-800 px-3 py-2 text-sm font-medium transition-colors">Accueil</a>
                         <div class="relative group">
-                            <a href="#expertises" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors cursor-pointer">
+                            <a href="#expertises" class="text-gray-700 hover:text-custom-blue px-3 py-2 text-sm font-medium transition-colors cursor-pointer">
                                 Nos Expertises <i class="fas fa-chevron-down ml-1"></i>
                             </a>
                             <div class="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -66,14 +66,14 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#about" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">À propos</a>
-                        <a href="#blog" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Blog</a>
-                        <a href="#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                        <a href="#about" class="text-gray-700 hover:text-custom-blue px-3 py-2 text-sm font-medium transition-colors">À propos</a>
+                        <a href="#blog" class="text-gray-700 hover:text-custom-blue px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                        <a href="#contact" class="text-gray-700 hover:text-custom-blue px-3 py-2 text-sm font-medium transition-colors">Contact</a>
                     </div>
                 </div>
                 
                 <div class="flex items-center space-x-4">
-                    <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+                    <a href="#contact" class="btn-custom-primary">
                         Prendre RDV
                     </a>
                 </div>
@@ -127,7 +127,7 @@
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <div class="p-8">
                         <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                            <i class="fas fa-calculator text-blue-600 text-2xl"></i>
+                            <i class="fas fa-calculator text-custom-blue text-2xl"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">Gestion Comptable</h3>
                         <p class="text-gray-600 mb-6">Tenue de comptabilité, déclarations fiscales et sociales, formalités juridiques courantes.</p>
@@ -145,7 +145,7 @@
                                 Déclarations sociales
                             </li>
                         </ul>
-                        <a href="#gestion-comptable" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        <a href="#gestion-comptable" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                             En savoir plus <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -173,7 +173,7 @@
                                 Médiation & arbitrage
                             </li>
                         </ul>
-                        <a href="#conseil-juridique" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        <a href="#conseil-juridique" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                             En savoir plus <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -201,7 +201,7 @@
                                 Optimisation fiscale
                             </li>
                         </ul>
-                        <a href="#conseil-fiscal" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        <a href="#conseil-fiscal" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                             En savoir plus <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -229,7 +229,7 @@
                                 Business Plan
                             </li>
                         </ul>
-                        <a href="#entrepreneuriat" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        <a href="#entrepreneuriat" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                             En savoir plus <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -257,7 +257,7 @@
                                 Diagnostic RH
                             </li>
                         </ul>
-                        <a href="#rh" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        <a href="#rh" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                             En savoir plus <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -285,7 +285,7 @@
                                 Copywriting
                             </li>
                         </ul>
-                        <a href="#marketing" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        <a href="#marketing" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                             En savoir plus <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -311,7 +311,7 @@
                 <div class="space-y-8">
                     <div>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">
-                            <i class="fas fa-file-alt text-blue-600 mr-3"></i>
+                            <i class="fas fa-file-alt text-custom-blue mr-3"></i>
                             Travaux de Comptabilité
                         </h3>
                         <ul class="space-y-3">
@@ -442,7 +442,7 @@
                 <div class="bg-blue-600 text-white rounded-lg p-8">
                     <h3 class="text-2xl font-bold mb-4">Contactez-nous pour un devis gratuit</h3>
                     <p class="text-lg mb-6">Vous êtes à la recherche d'un cabinet comptable à Marrakech ? Contactez-nous pour un diagnostic gratuit de votre situation.</p>
-                    <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    <a href="#contact" class="bg-white text-custom-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                         Prendre rendez-vous
                     </a>
                 </div>
@@ -464,7 +464,7 @@
                 <!-- Constitution de Sociétés -->
                 <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
                     <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-building text-blue-600 text-2xl"></i>
+                        <i class="fas fa-building text-custom-blue text-2xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Constitution de Sociétés</h3>
                     <p class="text-gray-600 mb-6">Accompagnement complet pour la création de votre société (SARL, SARL AU, SCI, SCP, SNC, etc.).</p>
@@ -486,7 +486,7 @@
                             <span>Immatriculation RC</span>
                         </li>
                     </ul>
-                    <a href="#constitution" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                    <a href="#constitution" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                         Guide création SARL <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -516,7 +516,7 @@
                             <span>Augmentation capital</span>
                         </li>
                     </ul>
-                    <a href="#modifications" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                    <a href="#modifications" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                         En savoir plus <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -546,7 +546,7 @@
                             <span>Procédures amiables</span>
                         </li>
                     </ul>
-                    <a href="#mediation" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                    <a href="#mediation" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                         En savoir plus <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -715,7 +715,7 @@
                 <!-- Déclarations Fiscales -->
                 <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 card-hover">
                     <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-file-invoice text-blue-600 text-2xl"></i>
+                        <i class="fas fa-file-invoice text-custom-blue text-2xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Déclarations Fiscales</h3>
                     <p class="text-gray-600 mb-6">Suivi permanent pour optimiser votre fiscalité et rester en conformité.</p>
@@ -733,7 +733,7 @@
                             <span>Conformité légale</span>
                         </li>
                     </ul>
-                    <a href="#declarations" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                    <a href="#declarations" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                         En savoir plus <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -798,7 +798,7 @@
             <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-8 text-center">
                 <h3 class="text-2xl font-bold mb-4">Besoin d'une assistance lors d'un contrôle fiscal ?</h3>
                 <p class="text-lg mb-6">Vous avez reçu un avis de vérification ? Prenez contact dès aujourd'hui avec notre cabinet à Marrakech.</p>
-                <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <a href="#contact" class="bg-white text-custom-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                     Contactez-nous immédiatement
                 </a>
             </div>
@@ -826,7 +826,7 @@
                             Création d'Entreprise
                         </h3>
                         <p class="text-gray-600 mb-4">Nous vous assistons à chaque étape de la création de votre entreprise pour sécuriser votre lancement et poser les bases d'un projet viable.</p>
-                        <a href="#creation-entreprise" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        <a href="#creation-entreprise" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                             En savoir plus sur la création d'entreprise <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -915,7 +915,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-ear-listen text-blue-600 text-2xl"></i>
+                            <i class="fas fa-ear-listen text-custom-blue text-2xl"></i>
                         </div>
                         <h4 class="font-semibold text-gray-900 mb-2">Un interlocuteur à votre écoute</h4>
                         <p class="text-gray-600 text-sm">Nous comprenons vos besoins spécifiques et adaptons notre accompagnement à votre rythme.</p>
@@ -992,7 +992,7 @@
                     <div class="text-center">
                         <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Expert comptable" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
                         <h4 class="text-xl font-semibold text-gray-900 mb-2">Ahmed Bennani</h4>
-                        <p class="text-blue-600 font-medium mb-2">Expert-Comptable</p>
+                        <p class="text-custom-blue font-medium mb-2">Expert-Comptable</p>
                         <p class="text-gray-600 text-sm">Spécialisé en fiscalité des entreprises et optimisation comptable</p>
                     </div>
                     <div class="text-center">
@@ -1016,7 +1016,7 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                     <div class="text-center">
                         <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-cloud text-blue-600 text-2xl"></i>
+                            <i class="fas fa-cloud text-custom-blue text-2xl"></i>
                         </div>
                         <h4 class="font-semibold text-gray-900 mb-2">Solutions Cloud</h4>
                         <p class="text-gray-600 text-sm">Accès sécurisé à vos données</p>
@@ -1068,7 +1068,7 @@
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Nouveautés de la Loi de Finances 2024</h3>
                         <p class="text-gray-600 mb-4">Découvrez les principales mesures fiscales qui impacteront votre entreprise en 2024...</p>
-                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        <a href="#" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                             Lire la suite <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -1084,7 +1084,7 @@
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Guide Complet : Créer sa SARL au Maroc</h3>
                         <p class="text-gray-600 mb-4">Toutes les étapes détaillées pour constituer votre société en toute sérénité...</p>
-                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        <a href="#" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                             Lire la suite <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -1100,7 +1100,7 @@
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Comment Rédiger un Business Plan Efficace</h3>
                         <p class="text-gray-600 mb-4">Les clés pour construire un business plan qui séduira vos investisseurs...</p>
-                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        <a href="#" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                             Lire la suite <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -1116,7 +1116,7 @@
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Préparer son Entreprise au Contrôle Fiscal</h3>
                         <p class="text-gray-600 mb-4">Conseils pratiques pour anticiper et bien gérer un contrôle fiscal...</p>
-                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        <a href="#" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                             Lire la suite <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -1132,7 +1132,7 @@
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Optimiser la Gestion RH de votre PME</h3>
                         <p class="text-gray-600 mb-4">Stratégies pour améliorer le recrutement et la gestion des talents...</p>
-                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        <a href="#" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                             Lire la suite <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -1148,7 +1148,7 @@
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Développer sa Présence Digitale en 2024</h3>
                         <p class="text-gray-600 mb-4">Tendances et stratégies marketing digital pour les entreprises marocaines...</p>
-                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        <a href="#" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                             Lire la suite <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -1236,7 +1236,7 @@
                         <div class="space-y-6">
                             <div class="flex items-start">
                                 <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                                    <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                                    <i class="fas fa-map-marker-alt text-custom-blue text-xl"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-gray-900 mb-1">Adresse</h4>
@@ -1311,7 +1311,7 @@
                     <div class="bg-blue-600 text-white rounded-xl p-6">
                         <h4 class="text-xl font-bold mb-3">Prise de Rendez-vous en Ligne</h4>
                         <p class="mb-4">Planifiez votre consultation directement en ligne selon vos disponibilités.</p>
-                        <button class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        <button class="bg-white text-custom-blue px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                             <i class="fas fa-calendar-alt mr-2"></i>
                             Réserver un créneau
                         </button>

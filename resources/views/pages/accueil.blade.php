@@ -5,42 +5,48 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="gradient-bg hero-pattern relative overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-10"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in">
-                    Bienvenue chez <span class="text-yellow-300">Global Gestion</span><br>
-                    Cabinet d'expertise comptable, juridique et fiscal
-                </h1>
-                <p class="text-xl text-gray-200 mb-8 max-w-4xl mx-auto animate-fade-in">
-                    Spécialisé dans le conseil et l'accompagnement des entreprises à Marrakech. 
-                    Nous vous proposons un service global en <strong>comptabilité</strong>, <strong>fiscalité</strong>, 
-                    <strong>conseil juridique et social</strong>, <strong>conseil en entrepreneuriat</strong> et 
-                    <strong>conseil en stratégie et marketing digital</strong>.
-                </p>
-                <div class="text-lg text-gray-200 mb-8 animate-fade-in">
-                    Implanté à Marrakech, nous mettons à votre disposition notre expertise pour vous aider à développer votre activité, 
-                    rationnaliser vos décisions et optimiser votre situation juridique et fiscale. Que vous soyez jeune créateur, 
-                    chef d'entreprise ou professionnel indépendant, nous vous accompagnons à chaque étape de votre développement 
-                    vers un modèle conciliant la performance, la prospérité et la durabilité.
-                </div>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-                    <a href="{{ route('expertises.index') }}" class="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105">
-                        Découvrir nos services
-                    </a>
-                    <a href="{{ route('contact') }}" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-700 transition-all">
-                        Prendre rendez-vous
-                    </a>
-                </div>
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #245fa0 0%, #fe7a36 100%); min-height: 600px;">
+    <!-- Pattern overlay -->
+    <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.1\'%3E%3Ccircle cx=\'30\' cy=\'30\' r=\'4\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); opacity: 0.5;"></div>
+    
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-black opacity-10"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in">
+                Bienvenue chez <span style="color: #fef3cd;">Global Gestion</span><br>
+                Cabinet d'expertise comptable, juridique et fiscal
+            </h1>
+            <p class="text-xl text-gray-200 mb-8 max-w-4xl mx-auto animate-fade-in">
+                Spécialisé dans le conseil et l'accompagnement des entreprises à Marrakech. 
+                Nous vous proposons un service global en <strong>comptabilité</strong>, <strong>fiscalité</strong>, 
+                <strong>conseil juridique et social</strong>, <strong>conseil en entrepreneuriat</strong> et 
+                <strong>conseil en stratégie et marketing digital</strong>.
+            </p>
+            <div class="text-lg text-gray-200 mb-8 animate-fade-in">
+                Implanté à Marrakech, nous mettons à votre disposition notre expertise pour vous aider à développer votre activité, 
+                rationnaliser vos décisions et optimiser votre situation juridique et fiscale. Que vous soyez jeune créateur, 
+                chef d'entreprise ou professionnel indépendant, nous vous accompagnons à chaque étape de votre développement 
+                vers un modèle conciliant la performance, la prospérité et la durabilité.
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+                <a href="{{ route('expertises.index') }}" class="bg-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105" style="color: #245fa0;" onmouseover="this.style.backgroundColor='#f3f4f6'" onmouseout="this.style.backgroundColor='white'">
+                    Découvrir nos services
+                </a>
+                <a href="{{ route('contact') }}" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all" onmouseover="this.style.backgroundColor='white'; this.style.color='#245fa0'" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white'">
+                    Prendre rendez-vous
+                </a>
             </div>
         </div>
-        
-        <!-- Floating Elements -->
-        <div class="absolute top-20 left-10 w-20 h-20 bg-yellow-400 rounded-full opacity-20 animate-pulse"></div>
-        <div class="absolute bottom-20 right-10 w-16 h-16 bg-green-400 rounded-full opacity-20 animate-pulse delay-1000"></div>
-        <div class="absolute top-1/2 right-20 w-12 h-12 bg-blue-300 rounded-full opacity-20 animate-pulse delay-500"></div>
-    </section>
+    </div>
+    
+    <!-- Floating Elements avec vos couleurs -->
+    <div class="absolute top-20 left-10 w-20 h-20 rounded-full opacity-20 animate-pulse" style="background-color: #fef3cd;"></div>
+    <div class="absolute bottom-20 right-10 w-16 h-16 rounded-full opacity-20 animate-pulse" style="background-color: #fe7a36; animation-delay: 1s;"></div>
+    <div class="absolute top-1/2 right-20 w-12 h-12 rounded-full opacity-20 animate-pulse" style="background-color: #245fa0; animation-delay: 0.5s;"></div>
+</section>
+
 
     <!-- Services Overview -->
     <section class="bg-gray-50 py-20">

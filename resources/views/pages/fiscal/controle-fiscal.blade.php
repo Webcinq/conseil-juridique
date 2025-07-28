@@ -9,9 +9,9 @@
     <div class="bg-gray-50 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex items-center space-x-2 text-sm">
-                <a href="{{ route('accueil') }}" class="text-blue-600 hover:text-blue-800">Accueil</a>
+                <a href="{{ route('accueil') }}" class="text-custom-blue hover:text-blue-800">Accueil</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
-                <a href="{{ route('conseil-fiscal') }}" class="text-blue-600 hover:text-blue-800">Conseil Fiscal</a>
+                <a href="{{ route('conseil-fiscal') }}" class="text-custom-blue hover:text-blue-800">Conseil Fiscal</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
                 <span class="text-gray-600">Contrôle Fiscal</span>
             </nav>
@@ -118,15 +118,15 @@
                         <h4 class="text-xl font-bold text-gray-900 mb-4">Préparation au Contrôle Fiscal</h4>
                         <ul class="space-y-3">
                             <li class="flex items-start">
-                                <i class="fas fa-arrow-right text-blue-600 mr-3 mt-1"></i>
+                                <i class="fas fa-arrow-right text-custom-blue mr-3 mt-1"></i>
                                 <span class="text-gray-700">Vérification des pièces comptables et mise en conformité</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-arrow-right text-blue-600 mr-3 mt-1"></i>
+                                <i class="fas fa-arrow-right text-custom-blue mr-3 mt-1"></i>
                                 <span class="text-gray-700">Organisation et classement des documents</span>
                             </li>
                             <li class="flex items-start">
-                                <i class="fas fa-arrow-right text-blue-600 mr-3 mt-1"></i>
+                                <i class="fas fa-arrow-right text-custom-blue mr-3 mt-1"></i>
                                 <span class="text-gray-700">Identification des points de vigilance</span>
                             </li>
                         </ul>
@@ -216,7 +216,7 @@
                 <!-- TPE -->
                 <div class="text-center p-6 bg-blue-50 rounded-xl">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-store text-blue-600 text-2xl"></i>
+                        <i class="fas fa-store text-custom-blue text-2xl"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-3">TPE & PME</h3>
                     <p class="text-gray-600 text-sm">Accompagnement adapté aux petites et moyennes entreprises</p>
@@ -291,13 +291,13 @@
                 <!-- Services Préventifs -->
                 <div class="bg-white rounded-xl shadow-lg p-8">
                     <h3 class="text-2xl font-bold text-gray-900 mb-6">
-                        <i class="fas fa-shield-alt text-blue-600 mr-3"></i>
+                        <i class="fas fa-shield-alt text-custom-blue mr-3"></i>
                         Services Préventifs
                     </h3>
                     <div class="space-y-6">
                         <div class="flex items-start">
                             <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                                <i class="fas fa-lightbulb text-blue-600"></i>
+                                <i class="fas fa-lightbulb text-custom-blue"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold text-gray-900 mb-2">Séances de Sensibilisation</h4>

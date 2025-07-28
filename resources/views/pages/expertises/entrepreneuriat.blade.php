@@ -9,9 +9,9 @@
     <div class="bg-gray-50 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex items-center space-x-2 text-sm">
-                <a href="{{ route('accueil') }}" class="text-blue-600 hover:text-blue-800">Accueil</a>
+                <a href="{{ route('accueil') }}" class="text-custom-blue hover:text-blue-800">Accueil</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
-                <a href="{{ route('expertises.index') }}" class="text-blue-600 hover:text-blue-800">Nos Expertises</a>
+                <a href="{{ route('expertises.index') }}" class="text-custom-blue hover:text-blue-800">Nos Expertises</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
                 <span class="text-gray-600">Conseil en Entrepreneuriat</span>
             </nav>
@@ -57,7 +57,7 @@
                             Cela inclut également l'<strong>accompagnement juridique complet lors de la constitution de votre société</strong>, 
                             de la rédaction des statuts à l'immatriculation au registre de commerce.
                         </p>
-                        <a href="{{ route('creation-entreprise') }}" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                        <a href="{{ route('creation-entreprise') }}" class="text-custom-blue font-semibold hover:text-blue-800 transition-colors">
                             En savoir plus sur notre service de constitution de sociétés <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -106,7 +106,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div>
                         <h2 class="text-3xl font-bold text-gray-900 mb-6">
-                            <i class="fas fa-chart-bar text-blue-600 mr-3"></i>
+                            <i class="fas fa-chart-bar text-custom-blue mr-3"></i>
                             Élaboration de Business Plan
                         </h2>
                         <p class="text-gray-600 mb-6">
@@ -307,7 +307,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                 <div class="bg-white rounded-xl shadow-lg p-8 text-center card-hover">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-ear-listen text-blue-600 text-2xl"></i>
+                        <i class="fas fa-ear-listen text-custom-blue text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Un interlocuteur à votre écoute</h3>
                     <p class="text-gray-600">
@@ -402,7 +402,7 @@
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
                 <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                    <i class="fas fa-laptop-code text-3xl text-blue-600 mb-3"></i>
+                    <i class="fas fa-laptop-code text-3xl text-custom-blue mb-3"></i>
                     <p class="text-sm font-medium text-gray-900">Tech & Digital</p>
                 </div>
                 <div class="text-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">

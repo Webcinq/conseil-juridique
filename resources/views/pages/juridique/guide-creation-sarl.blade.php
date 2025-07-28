@@ -514,7 +514,7 @@
     </section>
 
     <!-- Récapitulatif Délais et Coûts -->
-    <section class="bg-white py-20">
+    {{-- <section class="bg-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">Récapitulatif : Délais et Coûts</h2>
@@ -609,7 +609,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Check-list Documents -->
     <section class="bg-gray-50 py-20">
