@@ -4,11 +4,182 @@
 @section('meta_description', 'Gestion complète de votre comptabilité à Marrakech : Tenue et révision comptable, bilans, déclarations fiscales et sociales. Un accompagnement personnalisé pour entrepreneurs.')
 
 @section('content')
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section Hero avec Background</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
- <div class="bg-gray-50 py-4">
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-10px) rotate(2deg);
+            }
+        }
+
+        @keyframes subtleGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .hero-section {
+            position: relative;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.8), rgba(59, 130, 246, 0.7)),
+                        url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+            background-attachment: fixed; /* Fixe le background pour éviter le déplacement */
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-pulse-soft {
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .animate-glow {
+            animation: subtleGlow 3s ease-in-out infinite;
+        }
+
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-600 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-800 {
+            animation-delay: 0.8s;
+        }
+
+        .text-shadow {
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Particules flottantes améliorées */
+        .floating-particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .particle-1 {
+            width: 4px;
+            height: 4px;
+            top: 20%;
+            left: 10%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .particle-2 {
+            width: 6px;
+            height: 6px;
+            top: 30%;
+            right: 15%;
+            animation: float 4s ease-in-out infinite reverse;
+            animation-delay: 1s;
+        }
+
+        .particle-3 {
+            width: 3px;
+            height: 3px;
+            bottom: 40%;
+            left: 20%;
+            animation: float 5s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        .particle-4 {
+            width: 5px;
+            height: 5px;
+            bottom: 20%;
+            right: 10%;
+            animation: float 7s ease-in-out infinite reverse;
+            animation-delay: 0.5s;
+        }
+
+        /* Responsive fixes */
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll; /* Mobile friendly */
+            }
+        }
+    </style>
+</head>
+   <div class="bg-gray-50 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex items-center space-x-2 text-sm">
-                <a href="{{ route('accueil') }}" class="text-custom-blue hover:text-blue-800">Accueil</a>
+             <a href="{{ route('accueil') }}" class="text-custom-blue hover:text-blue-800">Accueil</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
                 <a href="{{ route('expertises.index') }}" class="text-custom-blue hover:text-blue-800">Nos Expertises</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
@@ -17,38 +188,87 @@
         </div>
     </div>
 
-<!-- Hero Section -->
-<!-- Hero Section -->
-<section class="bg-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <div class="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <i class="fas fa-calculator text-blue-600 text-3xl"></i>
-            </div>
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Gestion comptable pour entreprises à Marrakech
-            </h1>
-            <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Expertise, fiscalité et conformité pour votre réussite. 
-                Nous vous accompagnons dans toutes vos démarches comptables et fiscales afin d’optimiser la gestion et la performance de votre entreprise.
-            </p>
-        </div>
-    </div>
-</section>
+    <!-- Hero Section Optimisée -->
+    <section class="hero-section flex items-center justify-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="hero-content text-center">
+                <!-- Icône principale -->
+                <div class="animate-fade-in-up opacity-0">
+                    <div class="w-20 h-20 glass-effect rounded-xl flex items-center justify-center mx-auto mb-8 animate-float hover-lift">
+                        <i class="fas fa-calculator text-white text-3xl drop-shadow-lg"></i>
+                    </div>
+                </div>
+                
+                <!-- Titre principal -->
+                <div class="animate-fade-in-up animate-delay-200 opacity-0">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-shadow leading-tight">
+                        Gestion comptable pour entreprises à 
+                        <span class="text-orange-400 animate-pulse-soft">Marrakech</span>
+                    </h1>
+                </div>
+                
+                <!-- Sous-titre -->
+                <div class="animate-fade-in-up animate-delay-400 opacity-0">
+                    <p class="text-lg md:text-2xl text-white max-w-4xl mx-auto leading-relaxed text-shadow opacity-90 mb-8">
+                        Expertise, fiscalité et conformité pour votre réussite. 
+                        Nous vous accompagnons dans toutes vos démarches comptables et fiscales afin d'optimiser la gestion et la performance de votre entreprise.
+                    </p>
+                </div>
 
-<!-- Introduction -->
-<section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <p class="text-lg text-gray-700 leading-relaxed">
-                En tant que <strong>cabinet comptable à Marrakech</strong>, nous proposons un service complet de 
-                <strong>gestion comptable</strong> pour les TPE, PME et professions libérales. Notre objectif est de vous 
-                accompagner dans la <strong>tenue de votre comptabilité</strong>, le respect de vos 
-                <strong>obligations fiscales et sociales</strong> et la réalisation de vos <strong>formalités juridiques</strong>.
-            </p>
+                <!-- Boutons d'action -->
+                <div class="animate-fade-in-up animate-delay-600 opacity-0">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <button class="glass-effect text-white px-8 py-4 rounded-full font-semibold text-lg hover-lift animate-glow group">
+                            Découvrir nos services
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-blue-900 transition-all duration-300 hover-lift">
+                            Devis gratuit
+                            <i class="fas fa-phone ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Badges de confiance -->
+                <div class="animate-fade-in-up animate-delay-800 opacity-0 mt-12">
+                    <div class="flex flex-wrap justify-center gap-6 text-white/80">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-shield-alt text-green-400"></i>
+                            <span class="text-sm">+25 ans d'expertise</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-users text-blue-400"></i>
+                            <span class="text-sm">500+ clients</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-clock text-orange-400"></i>
+                            <span class="text-sm">Réponse 24h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+
+        <!-- Particules flottantes optimisées -->
+        <div class="floating-particle particle-1"></div>
+        <div class="floating-particle particle-2"></div>
+        <div class="floating-particle particle-3"></div>
+        <div class="floating-particle particle-4"></div>
+    </section>
+
+    <!-- Section d'introduction -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    En tant que <strong>cabinet comptable à Marrakech</strong>, nous proposons un service complet de 
+                    <strong>gestion comptable</strong> pour les TPE, PME et professions libérales. Notre objectif est de vous 
+                    accompagner dans la <strong>tenue de votre comptabilité</strong>, le respect de vos 
+                    <strong>obligations fiscales et sociales</strong> et la réalisation de vos <strong>formalités juridiques</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
 
 <!-- Services Section -->
 <section id="services" class="py-20">

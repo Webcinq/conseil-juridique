@@ -5,11 +5,212 @@
 @section('keywords', 'conseil juridique marrakech, création société, modifications statutaires, médiation arbitrage, droit des sociétés')
 
 @section('content')
+ <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-15px) rotate(-2deg);
+            }
+        }
+
+        @keyframes sway {
+            0%, 100% {
+                transform: rotate(-2deg);
+            }
+            50% {
+                transform: rotate(2deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.08);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        @keyframes subtleGlow {
+            0%, 100% {
+                box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 45px rgba(59, 130, 246, 0.5);
+            }
+        }
+
+        .hero-section {
+            position: relative;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(59, 130, 246, 0.8)),
+                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            padding:10px
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.25);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .animate-sway {
+            animation: sway 8s ease-in-out infinite;
+        }
+
+        .animate-pulse-soft {
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .animate-glow {
+            animation: subtleGlow 4s ease-in-out infinite;
+        }
+
+        .animate-shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 3s infinite;
+        }
+
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-600 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-800 {
+            animation-delay: 0.8s;
+        }
+
+        .animate-delay-1000 {
+            animation-delay: 1s;
+        }
+
+        .text-shadow {
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-effect-blue {
+            backdrop-filter: blur(15px);
+            background: rgba(59, 130, 246, 0.25);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+        }
+
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Particules juridiques thématiques */
+        .floating-particle {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .particle-scale {
+            top: 12%;
+            left: 5%;
+            animation: sway 10s ease-in-out infinite;
+        }
+
+        .particle-gavel {
+            top: 20%;
+            right: 8%;
+            animation: float 6s ease-in-out infinite reverse;
+            animation-delay: 1.5s;
+        }
+
+        .particle-document {
+            bottom: 25%;
+            left: 10%;
+            animation: float 7s ease-in-out infinite;
+            animation-delay: 3s;
+        }
+
+        .particle-building {
+            bottom: 15%;
+            right: 12%;
+            animation: sway 9s ease-in-out infinite reverse;
+            animation-delay: 2s;
+        }
+
+        .particle-handshake {
+            top: 40%;
+            left: 3%;
+            animation: float 8s ease-in-out infinite;
+            animation-delay: 4s;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll;
+            }
+        }
+    </style>
     <!-- Breadcrumb -->
-    <div class="bg-gray-50 py-4">
+   <div class="bg-gray-50 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex items-center space-x-2 text-sm">
-                <a href="{{ route('accueil') }}" class="text-custom-blue hover:text-blue-800">Accueil</a>
+             <a href="{{ route('accueil') }}" class="text-custom-blue hover:text-blue-800">Accueil</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
                 <a href="{{ route('expertises.index') }}" class="text-custom-blue hover:text-blue-800">Nos Expertises</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
@@ -18,22 +219,167 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <div class="w-20 h-20 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-balance-scale text-green-600 text-3xl"></i>
+    <!-- Hero Section Optimisée -->
+    <section class="hero-section flex items-center justify-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="hero-content text-center">
+                <!-- Icône principale avec animation balance -->
+                <div class="animate-fade-in-up opacity-0">
+                    <div class="w-24 h-24 glass-effect-blue rounded-xl flex items-center justify-center mx-auto mb-8 animate-sway hover-lift animate-glow">
+                        <i class="fas fa-balance-scale text-white text-4xl drop-shadow-lg"></i>
+                    </div>
                 </div>
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    Conseil juridique pour entreprises : Création, suivi et accompagnement sur mesure
-                </h1>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                    Notre cabinet d'expertise juridique accompagne les dirigeants et entrepreneurs dans toutes leurs 
-                    démarches juridiques : constitution de société, modification des statuts, suivi juridique annuel, 
-                    médiation et arbitrage. Bénéficiez d'un accompagnement juridique conforme et adapté à vos besoins.
-                </p>
+                
+                <!-- Titre principal -->
+                <div class="animate-fade-in-up animate-delay-200 opacity-0">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-shadow leading-tight">
+                        <span class="text-blue-300 animate-pulse-soft">Conseil juridique</span> pour entreprises
+                        <br>
+                        <span class="text-2xl md:text-4xl lg:text-5xl text-white/90">
+                            Création, suivi et accompagnement sur mesure
+                        </span>
+                    </h1>
+                </div>
+                
+                <!-- Sous-titre avec points clés -->
+                <div class="animate-fade-in-up animate-delay-400 opacity-0">
+                    <div class="max-w-5xl mx-auto mb-8">
+                        <p class="text-lg md:text-xl text-white leading-relaxed text-shadow opacity-95 mb-6">
+                            Notre cabinet d'expertise juridique accompagne les dirigeants et entrepreneurs dans toutes leurs démarches juridiques.
+                        </p>
+                        <p class="text-base md:text-lg text-blue-100 leading-relaxed text-shadow">
+                            <strong>Constitution de société</strong>, <strong>modification des statuts</strong>, 
+                            <strong>suivi juridique annuel</strong>, <strong>médiation et arbitrage</strong>. 
+                            Bénéficiez d'un accompagnement juridique conforme et adapté à vos besoins.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Services juridiques en badges -->
+                <div class="animate-fade-in-up animate-delay-600 opacity-0 mb-10">
+                    <div class="flex flex-wrap justify-center gap-4 mb-8">
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-building text-blue-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Constitution</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-edit text-purple-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Modifications</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-handshake text-green-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Médiation</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-gavel text-yellow-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Arbitrage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Boutons d'action -->
+                <div class="animate-fade-in-up animate-delay-600 opacity-0">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                        <button class="glass-effect-blue text-white px-8 py-4 rounded-full font-semibold text-lg hover-lift animate-glow group">
+                            <i class="fas fa-rocket mr-2 group-hover:rotate-12 transition-transform"></i>
+                            Créer ma société
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-blue-900 transition-all duration-300 hover-lift">
+                            <i class="fas fa-balance-scale mr-2"></i>
+                            Consultation gratuite
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Avantages clés -->
+                <div class="animate-fade-in-up animate-delay-800 opacity-0 mb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+                        <div class="glass-effect p-4 rounded-lg">
+                            <i class="fas fa-shield-alt text-blue-400 text-xl mb-2"></i>
+                            <h3 class="text-white font-semibold text-sm">Sécurité juridique assurée</h3>
+                            <p class="text-white/80 text-xs">Conformité et protection</p>
+                        </div>
+                        <div class="glass-effect p-4 rounded-lg">
+                            <i class="fas fa-clock text-green-400 text-xl mb-2"></i>
+                            <h3 class="text-white font-semibold text-sm">Gain de temps</h3>
+                            <p class="text-white/80 text-xs">Démarches simplifiées</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Délai création -->
+                <div class="animate-fade-in-up animate-delay-1000 opacity-0">
+                    <div class="glass-effect border-l-4 border-blue-400 p-4 max-w-2xl mx-auto rounded-lg">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-clock text-blue-400 text-xl mr-3 animate-pulse-soft"></i>
+                            <div class="text-center">
+                                <h3 class="text-white font-semibold">Délai de Création</h3>
+                                <p class="text-white/90 text-sm">En moyenne <strong>3 à 10 jours ouvrables</strong> pour créer votre SARL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats de confiance -->
+                <div class="animate-fade-in-up animate-delay-1000 opacity-0 mt-12">
+                    <div class="flex flex-wrap justify-center gap-8 text-white/80">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-building text-blue-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">500+</div>
+                                <div class="text-xs">Sociétés créées</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-handshake text-green-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">98%</div>
+                                <div class="text-xs">Médiation réussie</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-clock text-orange-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">24h</div>
+                                <div class="text-xs">Réponse rapide</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-award text-purple-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">25 ans</div>
+                                <div class="text-xs">D'expertise</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <!-- Particules thématiques juridiques -->
+        <div class="floating-particle particle-scale opacity-20">
+            <i class="fas fa-balance-scale text-white text-5xl"></i>
+        </div>
+        <div class="floating-particle particle-gavel opacity-15">
+            <i class="fas fa-gavel text-blue-300 text-4xl"></i>
+        </div>
+        <div class="floating-particle particle-document opacity-20">
+            <i class="fas fa-file-contract text-white text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-building opacity-15">
+            <i class="fas fa-building text-blue-200 text-4xl"></i>
+        </div>
+        <div class="floating-particle particle-handshake opacity-20">
+            <i class="fas fa-handshake text-green-300 text-3xl"></i>
+        </div>
+
+        <!-- Éléments décoratifs supplémentaires -->
+        <div class="absolute top-1/4 right-1/4 opacity-5">
+            <i class="fas fa-university text-white text-8xl animate-sway" style="animation-delay: 2s;"></i>
+        </div>
+        <div class="absolute bottom-1/3 left-1/4 opacity-5">
+            <i class="fas fa-scroll text-white text-6xl animate-float" style="animation-delay: 4s;"></i>
         </div>
     </section>
 

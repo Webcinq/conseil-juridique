@@ -5,6 +5,197 @@
 @section('keywords', 'contrôle fiscal marrakech, contentieux fiscal, assistance fiscale, expert fiscal, conseil fiscal')
 
 @section('content')
+<style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-12px) rotate(3deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        @keyframes subtleGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(34, 197, 94, 0.4);
+            }
+        }
+
+        .hero-section {
+            position: relative;
+            background: linear-gradient(135deg, rgba(21, 128, 61, 0.85), rgba(34, 197, 94, 0.75)),
+                        url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+                        padding: 10px
+
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.25);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .animate-pulse-soft {
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .animate-glow {
+            animation: subtleGlow 3s ease-in-out infinite;
+        }
+
+        .animate-shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+        }
+
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-600 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-800 {
+            animation-delay: 0.8s;
+        }
+
+        .text-shadow {
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-effect-green {
+            backdrop-filter: blur(15px);
+            background: rgba(34, 197, 94, 0.2);
+            border: 1px solid rgba(34, 197, 94, 0.4);
+        }
+
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Particules spécialisées pour le fiscal */
+        .floating-particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .particle-dollar {
+            width: 20px;
+            height: 20px;
+            top: 15%;
+            left: 8%;
+            background: rgba(34, 197, 94, 0.3);
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .particle-euro {
+            width: 16px;
+            height: 16px;
+            top: 25%;
+            right: 12%;
+            background: rgba(34, 197, 94, 0.2);
+            animation: float 6s ease-in-out infinite reverse;
+            animation-delay: 1s;
+        }
+
+        .particle-percent {
+            width: 12px;
+            height: 12px;
+            bottom: 35%;
+            left: 15%;
+            background: rgba(255, 255, 255, 0.2);
+            animation: float 4s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        .particle-chart {
+            width: 18px;
+            height: 18px;
+            bottom: 20%;
+            right: 8%;
+            background: rgba(34, 197, 94, 0.25);
+            animation: float 7s ease-in-out infinite reverse;
+            animation-delay: 0.5s;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll;
+            }
+        }
+</style>
     <!-- Breadcrumb -->
     <div class="bg-gray-50 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,22 +209,149 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <div class="w-20 h-20 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-file-invoice-dollar text-green-600 text-3xl"></i>
+    <!-- Hero Section Optimisée -->
+    <section class="hero-section flex items-center justify-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="hero-content text-center">
+                <!-- Icône principale avec effet lumineux -->
+                <div class="animate-fade-in-up opacity-0">
+                    <div class="w-24 h-24 glass-effect-green rounded-xl flex items-center justify-center mx-auto mb-8 animate-float hover-lift animate-glow">
+                        <i class="fas fa-file-invoice-dollar text-white text-4xl drop-shadow-lg"></i>
+                    </div>
                 </div>
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    Conseil Fiscal pour Entreprises : Accompagnement par une Expertise Fiscale
-                </h1>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                    Notre cabinet d'expertise fiscale vous accompagne dans la gestion de votre fiscalité d'entreprise. 
-                    Grâce à un service de conseil fiscal sur mesure, nous vous accompagnons lors d'un contrôle fiscal, 
-                    de litige avec l'administration fiscale ou pour l'établissement de vos déclarations fiscales.
-                </p>
+                
+                <!-- Titre principal -->
+                <div class="animate-fade-in-up animate-delay-200 opacity-0">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-shadow leading-tight">
+                        <span class="text-green-300 animate-pulse-soft">Conseil Fiscal</span> pour Entreprises
+                        <br>
+                        <span class="text-2xl md:text-4xl lg:text-5xl text-white/90">
+                            Accompagnement par une Expertise Fiscale
+                        </span>
+                    </h1>
+                </div>
+                
+                <!-- Sous-titre avec mise en avant des points clés -->
+                <div class="animate-fade-in-up animate-delay-400 opacity-0">
+                    <div class="max-w-5xl mx-auto mb-8">
+                        <p class="text-lg md:text-2xl text-white leading-relaxed text-shadow opacity-95 mb-6">
+                            Notre cabinet d'expertise fiscale vous accompagne dans la gestion de votre fiscalité d'entreprise.
+                        </p>
+                        <p class="text-base md:text-xl text-green-100 leading-relaxed text-shadow">
+                            Grâce à un service de <strong>conseil fiscal sur mesure</strong>, nous vous accompagnons lors d'un 
+                            <strong>contrôle fiscal</strong>, de <strong>litige avec l'administration fiscale</strong> ou pour 
+                            l'établissement de vos <strong>déclarations fiscales</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Services rapides -->
+                <div class="animate-fade-in-up animate-delay-600 opacity-0 mb-10">
+                    <div class="flex flex-wrap justify-center gap-4 mb-8">
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-shield-alt text-red-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Contrôle Fiscal</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-gavel text-purple-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Contentieux</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-file-invoice text-blue-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Déclarations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Boutons d'action -->
+                <div class="animate-fade-in-up animate-delay-600 opacity-0">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                        <button class="glass-effect-green text-white px-8 py-4 rounded-full font-semibold text-lg hover-lift animate-glow group">
+                            <a href="{{ route('contact') }}">
+                            <i class="fas fa-phone mr-2 group-hover:rotate-12 transition-transform"></i>
+                            Assistance immédiate
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-green-800 transition-all duration-300 hover-lift">
+                                                       <a href="{{ route('contact') }}">
+
+                            <i class="fas fa-calculator mr-2"></i>
+                            Devis gratuit
+                            </a>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Alerte urgence -->
+                <div class="animate-fade-in-up animate-delay-800 opacity-0">
+                    <div class="glass-effect border-l-4 border-red-400 p-4 max-w-2xl mx-auto rounded-lg">
+                        <div class="flex items-center">
+                            <i class="fas fa-exclamation-triangle text-red-400 text-xl mr-3 animate-pulse-soft"></i>
+                            <div class="text-left">
+                                <h3 class="text-white font-semibold">Urgence Contrôle Fiscal</h3>
+                                <p class="text-white/90 text-sm">Vous avez reçu un avis de vérification ? Ne restez pas seul face à l'administration fiscale.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats de confiance -->
+                <div class="animate-fade-in-up animate-delay-800 opacity-0 mt-12">
+                    <div class="flex flex-wrap justify-center gap-8 text-white/80">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-shield-check text-green-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">95%</div>
+                                <div class="text-xs">Succès contentieux</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-clock text-blue-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">24h</div>
+                                <div class="text-xs">Réponse garantie</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-users text-orange-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">+300</div>
+                                <div class="text-xs">Contrôles gérés</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-award text-purple-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">25 ans</div>
+                                <div class="text-xs">D'expertise</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <!-- Particules thématiques fiscales -->
+        <div class="floating-particle particle-dollar">
+            <i class="fas fa-dollar-sign text-green-300 text-xs"></i>
+        </div>
+        <div class="floating-particle particle-euro">
+            <i class="fas fa-euro-sign text-green-200 text-xs"></i>
+        </div>
+        <div class="floating-particle particle-percent">
+            <i class="fas fa-percentage text-white text-xs"></i>
+        </div>
+        <div class="floating-particle particle-chart">
+            <i class="fas fa-chart-line text-green-300 text-xs"></i>
+        </div>
+
+        <!-- Éléments décoratifs supplémentaires -->
+        <div class="absolute top-32 left-1/4 opacity-10">
+            <i class="fas fa-balance-scale text-white text-6xl animate-float" style="animation-delay: 1.5s;"></i>
+        </div>
+        <div class="absolute bottom-32 right-1/4 opacity-10">
+            <i class="fas fa-gavel text-white text-5xl animate-float" style="animation-delay: 3s;"></i>
         </div>
     </section>
 

@@ -5,6 +5,264 @@
 @section('keywords', 'recrutement marrakech, management RH, diagnostic RH, climat social, ressources humaines')
 
 @section('content')
+
+ <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-10px) rotate(2deg);
+            }
+        }
+
+        @keyframes teamwork {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+            }
+            33% {
+                transform: scale(1.05) rotate(1deg);
+            }
+            66% {
+                transform: scale(1.02) rotate(-1deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.06);
+            }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+                filter: brightness(1);
+            }
+            50% {
+                transform: scale(1.1);
+                filter: brightness(1.2);
+            }
+        }
+
+        @keyframes subtleGlow {
+            0%, 100% {
+                box-shadow: 0 0 25px rgba(239, 68, 68, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 45px rgba(239, 68, 68, 0.5);
+            }
+        }
+
+        @keyframes network {
+            0%, 100% {
+                opacity: 0.3;
+                transform: translateY(0px);
+            }
+            50% {
+                opacity: 0.8;
+                transform: translateY(-5px);
+            }
+        }
+
+        .hero-section {
+            position: relative;
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.85), rgba(248, 113, 113, 0.8)),
+                        url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.25);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .animate-teamwork {
+            animation: teamwork 4s ease-in-out infinite;
+        }
+
+        .animate-pulse-soft {
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .animate-heartbeat {
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+
+        .animate-glow {
+            animation: subtleGlow 3s ease-in-out infinite;
+        }
+
+        .animate-network {
+            animation: network 3s ease-in-out infinite;
+        }
+
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-600 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-800 {
+            animation-delay: 0.8s;
+        }
+
+        .animate-delay-1000 {
+            animation-delay: 1s;
+        }
+
+        .text-shadow {
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-effect-red {
+            backdrop-filter: blur(15px);
+            background: rgba(239, 68, 68, 0.25);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+        }
+
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Particules RH thématiques */
+        .floating-particle {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .particle-team {
+            top: 15%;
+            left: 8%;
+            animation: teamwork 5s ease-in-out infinite;
+        }
+
+        .particle-handshake {
+            top: 25%;
+            right: 10%;
+            animation: float 6s ease-in-out infinite reverse;
+            animation-delay: 1s;
+        }
+
+        .particle-chart {
+            bottom: 30%;
+            left: 12%;
+            animation: network 4s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        .particle-user {
+            bottom: 20%;
+            right: 8%;
+            animation: heartbeat 3s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+
+        .particle-target {
+            top: 40%;
+            left: 5%;
+            animation: pulse 4s ease-in-out infinite;
+            animation-delay: 3s;
+        }
+
+        .particle-growth {
+            top: 35%;
+            right: 15%;
+            animation: float 5s ease-in-out infinite reverse;
+            animation-delay: 1.5s;
+        }
+
+        /* Connexions réseau */
+        .network-line {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: network 4s ease-in-out infinite;
+        }
+
+        .line-1 {
+            top: 25%;
+            left: 20%;
+            width: 15%;
+            transform: rotate(30deg);
+        }
+
+        .line-2 {
+            bottom: 35%;
+            right: 25%;
+            width: 12%;
+            transform: rotate(-45deg);
+            animation-delay: 1s;
+        }
+
+        .line-3 {
+            top: 60%;
+            left: 10%;
+            width: 20%;
+            transform: rotate(15deg);
+            animation-delay: 2s;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll;
+            }
+        }
+    </style>
     <!-- Breadcrumb -->
     <div class="bg-gray-50 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,22 +277,190 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <div class="w-20 h-20 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-users text-red-600 text-3xl"></i>
+    <section class="hero-section flex items-center justify-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="hero-content text-center">
+                <!-- Icône principale avec animation teamwork -->
+                <div class="animate-fade-in-up opacity-0">
+                    <div class="w-28 h-28 glass-effect-red rounded-xl flex items-center justify-center mx-auto mb-8 animate-teamwork hover-lift animate-glow relative">
+                        <i class="fas fa-users text-white text-5xl drop-shadow-lg"></i>
+                        <!-- Indicateurs de réseau autour -->
+                        <div class="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-heartbeat"></div>
+                        <div class="absolute -bottom-1 -left-1 w-2 h-2 bg-yellow-400 rounded-full animate-heartbeat" style="animation-delay: 0.5s;"></div>
+                    </div>
                 </div>
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    Recrutement & Management RH : Solutions Complètes pour Optimiser Votre Capital Humain
-                </h1>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                    Optimisez la gestion de votre capital humain avec nos services RH sur mesure. De la définition de poste au management des équipes, 
-                    nous vous accompagnons pour développer une stratégie RH performante et adaptée à vos enjeux.
-                </p>
+                
+                <!-- Titre principal -->
+                <div class="animate-fade-in-up animate-delay-200 opacity-0">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-shadow leading-tight">
+                        <span class="text-red-200 animate-pulse-soft">Recrutement & Management RH</span>
+                        <br>
+                        <span class="text-2xl md:text-4xl lg:text-5xl text-white/95">
+                            Solutions Complètes pour Optimiser Votre Capital Humain
+                        </span>
+                    </h1>
+                </div>
+                
+                <!-- Sous-titre avec focus RH -->
+                <div class="animate-fade-in-up animate-delay-400 opacity-0">
+                    <div class="max-w-5xl mx-auto mb-8">
+                        <p class="text-lg md:text-2xl text-white leading-relaxed text-shadow opacity-95 mb-6">
+                            Optimisez la gestion de votre capital humain avec nos services RH sur mesure.
+                        </p>
+                        <p class="text-base md:text-xl text-red-100 leading-relaxed text-shadow">
+                            De la <strong>définition de poste</strong> au <strong>management des équipes</strong>, 
+                            nous vous accompagnons pour développer une <strong>stratégie RH performante</strong> 
+                            et adaptée à vos enjeux.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Services RH en badges -->
+                <div class="animate-fade-in-up animate-delay-600 opacity-0 mb-10">
+                    <div class="flex flex-wrap justify-center gap-4 mb-8">
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-search text-blue-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Recrutement</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-users-cog text-green-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Management</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-chart-line text-yellow-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Performance</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-graduation-cap text-purple-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Formation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Boutons d'action -->
+                <div class="animate-fade-in-up animate-delay-600 opacity-0">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                        <button class="glass-effect-red text-white px-8 py-4 rounded-full font-semibold text-lg hover-lift animate-glow group">
+                            <i class="fas fa-user-plus mr-2 group-hover:rotate-12 transition-transform"></i>
+                            Optimisez vos RH
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-red-800 transition-all duration-300 hover-lift">
+                            <i class="fas fa-handshake mr-2"></i>
+                            Audit RH gratuit
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Processus RH -->
+                <div class="animate-fade-in-up animate-delay-800 opacity-0 mb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                        <div class="glass-effect p-4 rounded-lg hover-lift">
+                            <i class="fas fa-bullseye text-red-400 text-2xl mb-2"></i>
+                            <h3 class="text-white font-semibold text-sm">Définition</h3>
+                            <p class="text-white/80 text-xs">Postes & profils</p>
+                        </div>
+                        <div class="glass-effect p-4 rounded-lg hover-lift">
+                            <i class="fas fa-search-dollar text-blue-400 text-2xl mb-2"></i>
+                            <h3 class="text-white font-semibold text-sm">Sourcing</h3>
+                            <p class="text-white/80 text-xs">Candidats qualifiés</p>
+                        </div>
+                        <div class="glass-effect p-4 rounded-lg hover-lift">
+                            <i class="fas fa-user-check text-green-400 text-2xl mb-2"></i>
+                            <h3 class="text-white font-semibold text-sm">Sélection</h3>
+                            <p class="text-white/80 text-xs">Tests & entretiens</p>
+                        </div>
+                        <div class="glass-effect p-4 rounded-lg hover-lift">
+                            <i class="fas fa-rocket text-orange-400 text-2xl mb-2"></i>
+                            <h3 class="text-white font-semibold text-sm">Intégration</h3>
+                            <p class="text-white/80 text-xs">Suivi & formation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message RH -->
+                <div class="animate-fade-in-up animate-delay-1000 opacity-0">
+                    <div class="glass-effect border-l-4 border-red-400 p-4 max-w-2xl mx-auto rounded-lg">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-heart text-red-400 text-xl mr-3 animate-heartbeat"></i>
+                            <div class="text-center">
+                                <h3 class="text-white font-semibold">L'humain au cœur de votre réussite</h3>
+                                <p class="text-white/90 text-sm">Développez le potentiel de vos équipes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats RH -->
+                <div class="animate-fade-in-up animate-delay-1000 opacity-0 mt-12">
+                    <div class="flex flex-wrap justify-center gap-8 text-white/80">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-user-tie text-red-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">1000+</div>
+                                <div class="text-xs">Recrutements</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-chart-line text-green-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">90%</div>
+                                <div class="text-xs">Taux de satisfaction</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-clock text-blue-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">21 jours</div>
+                                <div class="text-xs">Délai moyen</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-trophy text-yellow-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">25 ans</div>
+                                <div class="text-xs">D'expertise RH</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Particules RH thématiques -->
+        <div class="floating-particle particle-team opacity-20">
+            <i class="fas fa-users text-red-300 text-4xl"></i>
+        </div>
+        <div class="floating-particle particle-handshake opacity-25">
+            <i class="fas fa-handshake text-green-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-chart opacity-20">
+            <i class="fas fa-chart-network text-blue-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-user opacity-25">
+            <i class="fas fa-user-graduate text-purple-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-target opacity-15">
+            <i class="fas fa-bullseye text-yellow-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-growth opacity-20">
+            <i class="fas fa-trending-up text-orange-300 text-3xl"></i>
+        </div>
+
+        <!-- Lignes de réseau RH -->
+        <div class="network-line line-1"></div>
+        <div class="network-line line-2"></div>
+        <div class="network-line line-3"></div>
+
+        <!-- Éléments décoratifs supplémentaires -->
+        <div class="absolute top-1/4 left-1/4 opacity-5">
+            <i class="fas fa-sitemap text-white text-8xl animate-network" style="animation-delay: 2s;"></i>
+        </div>
+        <div class="absolute bottom-1/3 right-1/4 opacity-5">
+            <i class="fas fa-people-arrows text-white text-6xl animate-teamwork" style="animation-delay: 4s;"></i>
+        </div>
     </section>
+
 
     <!-- Services RH -->
     <section class="bg-gray-50 py-20">

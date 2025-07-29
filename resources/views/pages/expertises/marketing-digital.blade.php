@@ -6,6 +6,296 @@
 
 @section('content')
     <!-- Breadcrumb -->
+     <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-12px) rotate(3deg);
+            }
+        }
+
+        @keyframes chartGrow {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+            }
+            33% {
+                transform: scale(1.1) rotate(2deg);
+            }
+            66% {
+                transform: scale(1.05) rotate(-1deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.08);
+            }
+        }
+
+        @keyframes digitalPulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 0 20px rgba(99, 102, 241, 0);
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes dataFlow {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+
+        @keyframes screenGlow {
+            0%, 100% {
+                box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 50px rgba(99, 102, 241, 0.6);
+            }
+        }
+
+        @keyframes rocket {
+            0%, 100% {
+                transform: translateY(0px) rotate(-15deg);
+            }
+            50% {
+                transform: translateY(-15px) rotate(15deg);
+            }
+        }
+
+        .hero-section {
+            position: relative;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.9), rgba(129, 140, 248, 0.8)),
+                        url('https://images.unsplash.com/photo-1460472178825-e5240623afd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80') center/cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            padding: 15px ;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .animate-chart-grow {
+            animation: chartGrow 3s ease-in-out infinite;
+        }
+
+        .animate-pulse-soft {
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .animate-digital-pulse {
+            animation: digitalPulse 2s infinite;
+        }
+
+        .animate-screen-glow {
+            animation: screenGlow 3s ease-in-out infinite;
+        }
+
+        .animate-rocket {
+            animation: rocket 4s ease-in-out infinite;
+        }
+
+        .animate-data-flow {
+            animation: dataFlow 3s linear infinite;
+        }
+
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-600 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-800 {
+            animation-delay: 0.8s;
+        }
+
+        .animate-delay-1000 {
+            animation-delay: 1s;
+        }
+
+        .text-shadow {
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-effect-indigo {
+            backdrop-filter: blur(15px);
+            background: rgba(99, 102, 241, 0.25);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+        }
+
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Particules marketing digital */
+        .floating-particle {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .particle-chart {
+            top: 12%;
+            left: 6%;
+            animation: chartGrow 5s ease-in-out infinite;
+        }
+
+        .particle-laptop {
+            top: 20%;
+            right: 8%;
+            animation: screenGlow 4s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        .particle-mobile {
+            bottom: 25%;
+            left: 10%;
+            animation: digitalPulse 3s infinite;
+            animation-delay: 2s;
+        }
+
+        .particle-rocket {
+            bottom: 15%;
+            right: 12%;
+            animation: rocket 6s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+
+        .particle-target {
+            top: 45%;
+            left: 3%;
+            animation: pulse 4s ease-in-out infinite;
+            animation-delay: 3s;
+        }
+
+        .particle-analytics {
+            top: 30%;
+            right: 15%;
+            animation: float 5s ease-in-out infinite reverse;
+            animation-delay: 1.5s;
+        }
+
+        /* Flux de données */
+        .data-stream {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(129, 140, 248, 0.8), transparent);
+            animation: dataFlow 4s linear infinite;
+        }
+
+        .stream-1 {
+            top: 30%;
+            left: 0;
+            width: 25%;
+        }
+
+        .stream-2 {
+            bottom: 40%;
+            right: 0;
+            width: 30%;
+            animation-delay: 1s;
+        }
+
+        .stream-3 {
+            top: 65%;
+            left: 0;
+            width: 20%;
+            animation-delay: 2s;
+        }
+
+        /* Code binaire animé */
+        .binary-code {
+            position: absolute;
+            font-family: 'Courier New', monospace;
+            font-size: 10px;
+            color: rgba(129, 140, 248, 0.3);
+            animation: dataFlow 8s linear infinite;
+        }
+
+        .binary-1 {
+            top: 20%;
+            right: 5%;
+        }
+
+        .binary-2 {
+            bottom: 30%;
+            left: 3%;
+            animation-delay: 2s;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll;
+            }
+        }
+    </style>
     <div class="bg-gray-50 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex items-center space-x-2 text-sm">
@@ -19,20 +309,199 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <div class="w-20 h-20 bg-indigo-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-chart-line text-indigo-600 text-3xl"></i>
+    <section class="hero-section flex items-center justify-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="hero-content text-center">
+                <!-- Icône principale avec animation chart-grow -->
+                <div class="animate-fade-in-up opacity-0">
+                    <div class="w-28 h-28 glass-effect-indigo rounded-xl flex items-center justify-center mx-auto mb-8 animate-chart-grow hover-lift animate-screen-glow relative">
+                        <i class="fas fa-chart-line text-white text-5xl drop-shadow-lg"></i>
+                        <!-- Indicateurs de croissance -->
+                        <div class="absolute -top-2 -right-2 w-4 h-4">
+                            <i class="fas fa-arrow-up text-green-400 text-sm animate-digital-pulse"></i>
+                        </div>
+                        <div class="absolute -bottom-2 -left-2 w-3 h-3">
+                            <i class="fas fa-wifi text-blue-300 text-xs animate-digital-pulse" style="animation-delay: 0.5s;"></i>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    Stratégie & Marketing Digital : Solutions Digitales pour Développer Votre Présence en Ligne
-                </h1>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                    Accélérez votre croissance digitale avec nos solutions marketing complètes. De la création de site web au référencement, 
-                    en passant par la stratégie de contenu, nous vous accompagnons dans votre transformation digitale.
-                </p>
+                
+                <!-- Titre principal -->
+                <div class="animate-fade-in-up animate-delay-200 opacity-0">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-shadow leading-tight">
+                        <span class="text-indigo-200 animate-pulse-soft">Stratégie & Marketing Digital</span>
+                        <br>
+                        <span class="text-2xl md:text-4xl lg:text-5xl text-white/95">
+                            Solutions Digitales pour Développer Votre Présence en Ligne
+                        </span>
+                    </h1>
+                </div>
+                
+                <!-- Sous-titre digital -->
+                <div class="animate-fade-in-up animate-delay-400 opacity-0">
+                    <div class="max-w-5xl mx-auto mb-8">
+                        <p class="text-lg md:text-2xl text-white leading-relaxed text-shadow opacity-95 mb-6">
+                            Accélérez votre croissance digitale avec nos solutions marketing complètes.
+                        </p>
+                        <p class="text-base md:text-xl text-indigo-100 leading-relaxed text-shadow">
+                            De la <strong>création de site web</strong> au <strong>référencement</strong>, 
+                            en passant par la <strong>stratégie de contenu</strong>, nous vous accompagnons 
+                            dans votre <strong>transformation digitale</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Services digitaux en badges -->
+                <div class="animate-fade-in-up animate-delay-600 opacity-0 mb-10">
+                    <div class="flex flex-wrap justify-center gap-4 mb-8">
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-globe text-blue-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Site Web</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-search text-green-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">SEO</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-share-alt text-pink-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Social Media</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-bullhorn text-orange-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Publicité</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Boutons d'action -->
+                <div class="animate-fade-in-up animate-delay-600 opacity-0">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                        <button class="glass-effect-indigo text-white px-8 py-4 rounded-full font-semibold text-lg hover-lift animate-screen-glow group">
+                            <i class="fas fa-rocket mr-2 group-hover:rotate-12 transition-transform"></i>
+                            Boostez votre digital
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-indigo-900 transition-all duration-300 hover-lift">
+                            <i class="fas fa-chart-bar mr-2"></i>
+                            Audit digital gratuit
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Processus digital -->
+                <div class="animate-fade-in-up animate-delay-800 opacity-0 mb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+                        <div class="glass-effect p-4 rounded-lg hover-lift">
+                            <i class="fas fa-lightbulb text-yellow-400 text-2xl mb-2 animate-digital-pulse"></i>
+                            <h3 class="text-white font-semibold text-sm">Stratégie</h3>
+                            <p class="text-white/80 text-xs">Analyse & objectifs</p>
+                        </div>
+                        <div class="glass-effect p-4 rounded-lg hover-lift">
+                            <i class="fas fa-code text-blue-400 text-2xl mb-2 animate-digital-pulse"></i>
+                            <h3 class="text-white font-semibold text-sm">Création</h3>
+                            <p class="text-white/80 text-xs">Design & développement</p>
+                        </div>
+                        <div class="glass-effect p-4 rounded-lg hover-lift">
+                            <i class="fas fa-megaphone text-pink-400 text-2xl mb-2 animate-digital-pulse"></i>
+                            <h3 class="text-white font-semibold text-sm">Promotion</h3>
+                            <p class="text-white/80 text-xs">Marketing & publicité</p>
+                        </div>
+                        <div class="glass-effect p-4 rounded-lg hover-lift">
+                            <i class="fas fa-chart-line text-green-400 text-2xl mb-2 animate-digital-pulse"></i>
+                            <h3 class="text-white font-semibold text-sm">Analyse</h3>
+                            <p class="text-white/80 text-xs">ROI & optimisation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message digital -->
+                <div class="animate-fade-in-up animate-delay-1000 opacity-0">
+                    <div class="glass-effect border-l-4 border-indigo-400 p-4 max-w-2xl mx-auto rounded-lg">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-wifi text-indigo-400 text-xl mr-3 animate-digital-pulse"></i>
+                            <div class="text-center">
+                                <h3 class="text-white font-semibold">Votre succès digital commence ici</h3>
+                                <p class="text-white/90 text-sm">Transformez vos visiteurs en clients fidèles</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats digitales -->
+                <div class="animate-fade-in-up animate-delay-1000 opacity-0 mt-12">
+                    <div class="flex flex-wrap justify-center gap-8 text-white/80">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-globe text-indigo-400 text-xl animate-digital-pulse"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">500+</div>
+                                <div class="text-xs">Sites créés</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-chart-line text-green-400 text-xl animate-digital-pulse"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">+300%</div>
+                                <div class="text-xs">ROI moyen</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-users text-pink-400 text-xl animate-digital-pulse"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">1M+</div>
+                                <div class="text-xs">Visiteurs générés</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-trophy text-yellow-400 text-xl animate-digital-pulse"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">5 ans</div>
+                                <div class="text-xs">Expertise digital</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <!-- Particules marketing digital -->
+        <div class="floating-particle particle-chart opacity-20">
+            <i class="fas fa-chart-bar text-indigo-300 text-4xl"></i>
+        </div>
+        <div class="floating-particle particle-laptop opacity-25">
+            <i class="fas fa-laptop text-blue-300 text-4xl"></i>
+        </div>
+        <div class="floating-particle particle-mobile opacity-20">
+            <i class="fas fa-mobile-alt text-green-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-rocket opacity-25">
+            <i class="fas fa-rocket text-red-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-target opacity-15">
+            <i class="fas fa-bullseye text-orange-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-analytics opacity-20">
+            <i class="fas fa-analytics text-purple-300 text-3xl"></i>
+        </div>
+
+        <!-- Flux de données -->
+        <div class="data-stream stream-1"></div>
+        <div class="data-stream stream-2"></div>
+        <div class="data-stream stream-3"></div>
+
+        <!-- Code binaire animé -->
+        <div class="binary-code binary-1">
+            01010101<br>11001100<br>10101010
+        </div>
+        <div class="binary-code binary-2">
+            11100011<br>01011010<br>10010110
+        </div>
+
+        <!-- Éléments décoratifs numériques -->
+        <div class="absolute top-1/4 left-1/4 opacity-5">
+            <i class="fas fa-network-wired text-white text-8xl animate-digital-pulse" style="animation-delay: 2s;"></i>
+        </div>
+        <div class="absolute bottom-1/3 right-1/4 opacity-5">
+            <i class="fas fa-server text-white text-6xl animate-screen-glow" style="animation-delay: 4s;"></i>
         </div>
     </section>
 

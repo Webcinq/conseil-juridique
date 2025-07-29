@@ -5,6 +5,264 @@
 @section('keywords', 'conseil entrepreneuriat, business plan, étude faisabilité, création entreprise marrakech, accompagnement entrepreneur')
 
 @section('content')
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conseil Entrepreneuriat Marrakech - Hero Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-12px) rotate(5deg);
+            }
+        }
+
+        @keyframes lightbulb {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+                filter: brightness(1);
+            }
+            50% {
+                transform: scale(1.1) rotate(-3deg);
+                filter: brightness(1.2);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0) rotate(0deg);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1) rotate(180deg);
+            }
+        }
+
+        @keyframes subtleGlow {
+            0%, 100% {
+                box-shadow: 0 0 30px rgba(245, 158, 11, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 50px rgba(245, 158, 11, 0.6);
+            }
+        }
+
+        @keyframes rocket {
+            0%, 100% {
+                transform: translateY(0px) rotate(-10deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+        }
+
+        .hero-section {
+            position: relative;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.85), rgba(251, 191, 36, 0.8)),
+                        url('https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            padding: 10px
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .animate-lightbulb {
+            animation: lightbulb 3s ease-in-out infinite;
+        }
+
+        .animate-pulse-soft {
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .animate-glow {
+            animation: subtleGlow 3s ease-in-out infinite;
+        }
+
+        .animate-sparkle {
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        .animate-rocket {
+            animation: rocket 4s ease-in-out infinite;
+        }
+
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-600 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-800 {
+            animation-delay: 0.8s;
+        }
+
+        .animate-delay-1000 {
+            animation-delay: 1s;
+        }
+
+        .text-shadow {
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-effect-yellow {
+            backdrop-filter: blur(15px);
+            background: rgba(245, 158, 11, 0.25);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+        }
+
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Particules entrepreneuriales */
+        .floating-particle {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .particle-lightbulb {
+            top: 15%;
+            left: 8%;
+            animation: sparkle 3s ease-in-out infinite;
+        }
+
+        .particle-rocket {
+            top: 25%;
+            right: 10%;
+            animation: rocket 5s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        .particle-chart {
+            bottom: 30%;
+            left: 12%;
+            animation: float 6s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        .particle-target {
+            bottom: 20%;
+            right: 8%;
+            animation: pulse 4s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+
+        .particle-idea {
+            top: 40%;
+            left: 5%;
+            animation: lightbulb 7s ease-in-out infinite;
+            animation-delay: 3s;
+        }
+
+        .particle-growth {
+            top: 35%;
+            right: 15%;
+            animation: float 5s ease-in-out infinite reverse;
+            animation-delay: 1.5s;
+        }
+
+        /* Étoiles scintillantes */
+        .sparkle {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.8);
+            pointer-events: none;
+        }
+
+        .sparkle-1 {
+            top: 20%;
+            left: 15%;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        .sparkle-2 {
+            top: 70%;
+            right: 20%;
+            animation: sparkle 2.5s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+
+        .sparkle-3 {
+            bottom: 40%;
+            left: 20%;
+            animation: sparkle 3s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll;
+            }
+        }
+    </style>
     <!-- Breadcrumb -->
     <div class="bg-gray-50 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,28 +270,200 @@
                 <a href="{{ route('accueil') }}" class="text-custom-blue hover:text-blue-800">Accueil</a>
                 <i class="fas fa-chevron-right text-gray-400"></i>
                 <a href="{{ route('expertises.index') }}" class="text-custom-blue hover:text-blue-800">Nos Expertises</a>
-                <i class="fas fa-chevron-right text-gray-400"></i>
-                <span class="text-gray-600">Conseil en Entrepreneuriat</span>
+         <i class="fas fa-chevron-right text-gray-400"></i>
+                <span class="text-gray-600">Conseil Entrepreneuriat</span>
             </nav>
         </div>
     </div>
 
     <!-- Hero Section -->
-    <section class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <div class="w-20 h-20 bg-yellow-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-lightbulb text-yellow-600 text-3xl"></i>
+   <section class="hero-section flex items-center justify-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="hero-content text-center">
+                <!-- Icône principale avec animation lightbulb -->
+                <div class="animate-fade-in-up opacity-0">
+                    <div class="w-28 h-28 glass-effect-yellow rounded-xl flex items-center justify-center mx-auto mb-8 animate-lightbulb hover-lift animate-glow relative">
+                        <i class="fas fa-lightbulb text-white text-5xl drop-shadow-lg"></i>
+                        <!-- Étincelles autour de l'ampoule -->
+                        <div class="absolute -top-2 -right-2">
+                            <i class="fas fa-sparkles text-yellow-300 text-sm animate-sparkle"></i>
+                        </div>
+                        <div class="absolute -bottom-2 -left-2">
+                            <i class="fas fa-sparkles text-yellow-200 text-xs animate-sparkle" style="animation-delay: 1s;"></i>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    Conseil en Entrepreneuriat : Un Accompagnement d'Expert pour Concrétiser Votre Projet
-                </h1>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                    Vous avez une idée d'entreprise mais vous ne savez pas par où commencer ? Notre cabinet vous propose un 
-                    <strong>accompagnement sur mesure à chaque étape de votre parcours entrepreneurial</strong>, de l'idée 
-                    initiale jusqu'à la constitution définitive de votre société.
-                </p>
+                
+                <!-- Titre principal -->
+                <div class="animate-fade-in-up animate-delay-200 opacity-0">
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-shadow leading-tight">
+                        <span class="text-yellow-200 animate-pulse-soft">Conseil en Entrepreneuriat</span>
+                        <br>
+                        <span class="text-2xl md:text-4xl lg:text-5xl text-white/95">
+                            Un Accompagnement d'Expert pour Concrétiser Votre Projet
+                        </span>
+                    </h1>
+                </div>
+                
+                <!-- Sous-titre motivant -->
+                <div class="animate-fade-in-up animate-delay-400 opacity-0">
+                    <div class="max-w-5xl mx-auto mb-8">
+                        <p class="text-lg md:text-2xl text-white leading-relaxed text-shadow opacity-95 mb-6">
+                            Vous avez une idée d'entreprise mais vous ne savez pas par où commencer ?
+                        </p>
+                        <p class="text-base md:text-xl text-yellow-100 leading-relaxed text-shadow">
+                            Notre cabinet vous propose un <strong>accompagnement sur mesure à chaque étape</strong> 
+                            de votre parcours entrepreneurial, de l'<strong>idée initiale</strong> jusqu'à la 
+                            <strong>constitution définitive</strong> de votre société.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Étapes entrepreneuriales en badges -->
+                <div class="animate-fade-in-up animate-delay-600 opacity-0 mb-10">
+                    <div class="flex flex-wrap justify-center gap-4 mb-8">
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-lightbulb text-yellow-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Idée</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-route text-blue-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Stratégie</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-chart-line text-green-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Business Plan</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift">
+                            <i class="fas fa-rocket text-red-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Lancement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Boutons d'action -->
+                <div class="animate-fade-in-up animate-delay-600 opacity-0">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                        <button class="glass-effect-yellow text-white px-8 py-4 rounded-full font-semibold text-lg hover-lift animate-glow group">
+                            <i class="fas fa-rocket mr-2 group-hover:rotate-12 transition-transform"></i>
+                            Lancer mon projet
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-yellow-800 transition-all duration-300 hover-lift">
+                            <i class="fas fa-calendar-check mr-2"></i>
+                            Rendez-vous gratuit
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Services entrepreneuriaux -->
+                <div class="animate-fade-in-up animate-delay-800 opacity-0 mb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+                        <div class="glass-effect p-4 rounded-lg hover-lift">
+                            <i class="fas fa-brain text-purple-400 text-2xl mb-2"></i>
+                            <h3 class="text-white font-semibold text-sm">Validation d'idée</h3>
+                            <p class="text-white/80 text-xs">Étude de faisabilité</p>
+                        </div>
+                        <div class="glass-effect p-4 rounded-lg hover-lift">
+                            <i class="fas fa-map-marked-alt text-blue-400 text-2xl mb-2"></i>
+                            <h3 class="text-white font-semibold text-sm">Stratégie business</h3>
+                            <p class="text-white/80 text-xs">Plan d'action personnalisé</p>
+                        </div>
+                        <div class="glass-effect p-4 rounded-lg hover-lift">
+                            <i class="fas fa-handshake text-green-400 text-2xl mb-2"></i>
+                            <h3 class="text-white font-semibold text-sm">Accompagnement</h3>
+                            <p class="text-white/80 text-xs">Suivi continu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message motivant -->
+                <div class="animate-fade-in-up animate-delay-1000 opacity-0">
+                    <div class="glass-effect border-l-4 border-yellow-400 p-4 max-w-2xl mx-auto rounded-lg">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-quote-left text-yellow-400 text-xl mr-3"></i>
+                            <div class="text-center">
+                                <h3 class="text-white font-semibold">Transformez votre idée en succès</h3>
+                                <p class="text-white/90 text-sm">Chaque grande entreprise a commencé par une simple idée</p>
+                            </div>
+                            <i class="fas fa-quote-right text-yellow-400 text-xl ml-3"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats de réussite -->
+                <div class="animate-fade-in-up animate-delay-1000 opacity-0 mt-12">
+                    <div class="flex flex-wrap justify-center gap-8 text-white/80">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-rocket text-yellow-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">200+</div>
+                                <div class="text-xs">Projets accompagnés</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-chart-line text-green-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">85%</div>
+                                <div class="text-xs">Taux de réussite</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-clock text-blue-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">15 jours</div>
+                                <div class="text-xs">Délai moyen</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-award text-purple-400 text-xl"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">25 ans</div>
+                                <div class="text-xs">D'expérience</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <!-- Particules entrepreneuriales thématiques -->
+        <div class="floating-particle particle-lightbulb opacity-20">
+            <i class="fas fa-lightbulb text-yellow-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-rocket opacity-25">
+            <i class="fas fa-rocket text-red-300 text-4xl"></i>
+        </div>
+        <div class="floating-particle particle-chart opacity-20">
+            <i class="fas fa-chart-line text-green-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-target opacity-25">
+            <i class="fas fa-bullseye text-blue-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-idea opacity-15">
+            <i class="fas fa-brain text-purple-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-growth opacity-20">
+            <i class="fas fa-seedling text-green-300 text-3xl"></i>
+        </div>
+
+        <!-- Étoiles scintillantes -->
+        <div class="sparkle sparkle-1">
+            <i class="fas fa-star text-sm"></i>
+        </div>
+        <div class="sparkle sparkle-2">
+            <i class="fas fa-star text-xs"></i>
+        </div>
+        <div class="sparkle sparkle-3">
+            <i class="fas fa-star text-sm"></i>
+        </div>
+
+        <!-- Éléments décoratifs supplémentaires -->
+        <div class="absolute top-1/4 left-1/4 opacity-5">
+            <i class="fas fa-cogs text-white text-8xl animate-float" style="animation-delay: 2s;"></i>
+        </div>
+        <div class="absolute bottom-1/3 right-1/4 opacity-5">
+            <i class="fas fa-users text-white text-6xl animate-pulse-soft" style="animation-delay: 4s;"></i>
         </div>
     </section>
 
