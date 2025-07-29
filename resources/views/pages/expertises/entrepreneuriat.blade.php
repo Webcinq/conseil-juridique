@@ -345,13 +345,17 @@
                 <div class="animate-fade-in-up animate-delay-600 opacity-0">
                     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                         <button class="glass-effect-yellow text-white px-8 py-4 rounded-full font-semibold text-lg hover-lift animate-glow group">
+                           <a href="#services-principaux">
                             <i class="fas fa-rocket mr-2 group-hover:rotate-12 transition-transform"></i>
                             Lancer mon projet
                             <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
                         </button>
                         <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-yellow-800 transition-all duration-300 hover-lift">
+                           <a href="{{route('contact')}}">
                             <i class="fas fa-calendar-check mr-2"></i>
                             Rendez-vous gratuit
+                            </a>
                         </button>
                     </div>
                 </div>
@@ -468,7 +472,7 @@
     </section>
 
     <!-- Services Principaux -->
-    <section class="bg-gray-50 py-20">
+    <section class="bg-gray-50 py-20" id="services-principaux">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
                 <div>

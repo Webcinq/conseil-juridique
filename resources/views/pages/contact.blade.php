@@ -4,6 +4,316 @@
 @section('meta-description', 'Contactez Global Gestion, votre cabinet comptable à Marrakech. Prendre rendez-vous pour vos besoins en comptabilité, fiscalité et conseil juridique.')
 
 @section('content')
+<style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-8px) rotate(3deg);
+            }
+        }
+
+        @keyframes phoneRing {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+            }
+            10% {
+                transform: scale(1.1) rotate(-3deg);
+            }
+            20% {
+                transform: scale(1.05) rotate(3deg);
+            }
+            30% {
+                transform: scale(1.1) rotate(-3deg);
+            }
+            40% {
+                transform: scale(1.05) rotate(3deg);
+            }
+            50% {
+                transform: scale(1) rotate(0deg);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes communicationGlow {
+            0%, 100% {
+                box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 45px rgba(59, 130, 246, 0.7);
+            }
+        }
+
+        @keyframes signalWaves {
+            0% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        @keyframes messageFlow {
+            0% {
+                opacity: 0;
+                transform: translateX(-30px) scale(0.8);
+            }
+            50% {
+                opacity: 1;
+                transform: translateX(0px) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(30px) scale(0.8);
+            }
+        }
+
+        @keyframes contactInvite {
+            0%, 100% {
+                transform: translateY(0px);
+                filter: brightness(1);
+            }
+            50% {
+                transform: translateY(-5px);
+                filter: brightness(1.1);
+            }
+        }
+
+        .hero-section {
+            position: relative;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.9), rgba(99, 102, 241, 0.85)),
+                        url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80') center/cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .animate-phone-ring {
+            animation: phoneRing 3s ease-in-out infinite;
+        }
+
+        .animate-pulse-soft {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .animate-communication-glow {
+            animation: communicationGlow 3s ease-in-out infinite;
+        }
+
+        .animate-signal-waves {
+            animation: signalWaves 2s ease-out infinite;
+        }
+
+        .animate-message-flow {
+            animation: messageFlow 4s ease-in-out infinite;
+        }
+
+        .animate-contact-invite {
+            animation: contactInvite 3s ease-in-out infinite;
+        }
+
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-600 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-800 {
+            animation-delay: 0.8s;
+        }
+
+        .animate-delay-1000 {
+            animation-delay: 1s;
+        }
+
+        .text-shadow {
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-effect-blue {
+            backdrop-filter: blur(15px);
+            background: rgba(59, 130, 246, 0.25);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+        }
+
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Ondes de signal */
+        .signal-wave {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(59, 130, 246, 0.4);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: signalWaves 2s ease-out infinite;
+        }
+
+        .wave-1 {
+            animation-delay: 0s;
+        }
+
+        .wave-2 {
+            animation-delay: 0.5s;
+        }
+
+        .wave-3 {
+            animation-delay: 1s;
+        }
+
+        /* Particules de communication */
+        .floating-particle {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .particle-phone {
+            top: 15%;
+            left: 8%;
+            animation: phoneRing 4s ease-in-out infinite;
+        }
+
+        .particle-email {
+            top: 20%;
+            right: 10%;
+            animation: messageFlow 5s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        .particle-chat {
+            bottom: 30%;
+            left: 12%;
+            animation: float 6s ease-in-out infinite reverse;
+            animation-delay: 2s;
+        }
+
+        .particle-location {
+            bottom: 25%;
+            right: 8%;
+            animation: pulse 3s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+
+        .particle-calendar {
+            top: 40%;
+            left: 5%;
+            animation: contactInvite 4s ease-in-out infinite;
+            animation-delay: 3s;
+        }
+
+        .particle-support {
+            top: 35%;
+            right: 15%;
+            animation: float 5s ease-in-out infinite reverse;
+            animation-delay: 1.5s;
+        }
+
+        /* Lignes de connexion */
+        .connection-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.4), transparent);
+            animation: messageFlow 6s ease-in-out infinite;
+        }
+
+        .connection-1 {
+            top: 25%;
+            left: 15%;
+            width: 25%;
+            transform: rotate(30deg);
+        }
+
+        .connection-2 {
+            bottom: 35%;
+            right: 20%;
+            width: 20%;
+            transform: rotate(-45deg);
+            animation-delay: 2s;
+        }
+
+        .connection-3 {
+            top: 65%;
+            left: 25%;
+            width: 30%;
+            transform: rotate(15deg);
+            animation-delay: 4s;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll;
+            }
+        }
+    </style>
     <!-- Breadcrumb -->
     <div class="bg-gray-50 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,18 +326,176 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <div class="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <i class="fas fa-phone text-blue-600 text-3xl"></i>
+    <section class="hero-section flex items-center justify-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="hero-content text-center">
+                <!-- Icône téléphone avec ondes de signal -->
+                <div class="animate-fade-in-up opacity-0">
+                    <div class="relative w-32 h-32 mx-auto mb-8">
+                        <div class="glass-effect-blue rounded-xl flex items-center justify-center mx-auto hover-lift animate-communication-glow w-full h-full">
+                            <i class="fas fa-phone text-white text-6xl drop-shadow-lg animate-phone-ring"></i>
+                        </div>
+                        <!-- Ondes de signal animées -->
+                        <div class="signal-wave wave-1"></div>
+                        <div class="signal-wave wave-2"></div>
+                        <div class="signal-wave wave-3"></div>
+                        <!-- Indicateur de disponibilité -->
+                        <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-check text-white text-xs animate-pulse-soft"></i>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Contactez-nous</h1>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Prêt à démarrer votre projet ? Contactez notre équipe d'experts pour un accompagnement personnalisé 
-                    dans tous vos besoins comptables, juridiques et fiscaux.
-                </p>
+                
+                <!-- Titre principal -->
+                <div class="animate-fade-in-up animate-delay-200 opacity-0">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 text-shadow leading-tight">
+                        <span class="text-blue-200 animate-pulse-soft">Contactez-nous</span>
+                    </h1>
+                </div>
+                
+                <!-- Invitation engageante -->
+                <div class="animate-fade-in-up animate-delay-400 opacity-0">
+                    <div class="max-w-4xl mx-auto mb-10">
+                        <p class="text-xl md:text-2xl text-white leading-relaxed text-shadow opacity-95 mb-6">
+                            <span class="text-yellow-300 font-semibold">Prêt à démarrer votre projet ?</span>
+                        </p>
+                        <p class="text-base md:text-xl text-blue-100 leading-relaxed text-shadow">
+                            Contactez notre équipe d'<strong>experts</strong> pour un accompagnement <strong>personnalisé</strong> 
+                            dans tous vos besoins <strong>comptables, juridiques et fiscaux</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Moyens de contact en badges -->
+                <div class="animate-fade-in-up animate-delay-600 opacity-0 mb-10">
+                    <div class="flex flex-wrap justify-center gap-4 mb-8">
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift animate-contact-invite">
+                            <i class="fas fa-phone text-green-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Téléphone</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift animate-contact-invite" style="animation-delay: 0.5s;">
+                            <i class="fas fa-envelope text-blue-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Email</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift animate-contact-invite" style="animation-delay: 1s;">
+                            <i class="fas fa-map-marker-alt text-red-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Visite</span>
+                        </div>
+                        <div class="glass-effect px-4 py-2 rounded-full hover-lift animate-contact-invite" style="animation-delay: 1.5s;">
+                            <i class="fas fa-calendar-check text-purple-400 mr-2"></i>
+                            <span class="text-white text-sm font-medium">Rendez-vous</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Boutons d'action prioritaires -->
+               
+
+                <!-- Avantages du contact -->
+                <div class="animate-fade-in-up animate-delay-800 opacity-0 mb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+                        <div class="glass-effect p-4 rounded-lg hover-lift">
+                            <i class="fas fa-clock text-green-400 text-2xl mb-2 animate-pulse-soft"></i>
+                            <h3 class="text-white font-semibold text-sm">Réponse rapide</h3>
+                            <p class="text-white/80 text-xs">Sous 24h garantie</p>
+                        </div>
+                        <div class="glass-effect p-4 rounded-lg hover-lift">
+                            <i class="fas fa-user-tie text-blue-400 text-2xl mb-2 animate-pulse-soft"></i>
+                            <h3 class="text-white font-semibold text-sm">Expert dédié</h3>
+                            <p class="text-white/80 text-xs">Conseiller personnel</p>
+                        </div>
+                        <div class="glass-effect p-4 rounded-lg hover-lift">
+                            <i class="fas fa-gift text-yellow-400 text-2xl mb-2 animate-pulse-soft"></i>
+                            <h3 class="text-white font-semibold text-sm">Consultation gratuite</h3>
+                            <p class="text-white/80 text-xs">Premier échange offert</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Informations de contact rapides -->
+             
+                <!-- Message d'invitation finale -->
+                <div class="animate-fade-in-up animate-delay-1000 opacity-0">
+                    <div class="glass-effect border-l-4 border-green-400 p-6 max-w-3xl mx-auto rounded-lg">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-comments text-green-400 text-2xl mr-4 animate-message-flow"></i>
+                            <div class="text-center">
+                                <h3 class="text-white font-bold text-lg mb-2">Parlons de votre projet !</h3>
+                                <p class="text-white/90 text-base">
+                                    Notre équipe est à votre écoute pour transformer vos ambitions en réussites concrètes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats de réactivité -->
+                <div class="animate-fade-in-up animate-delay-1000 opacity-0 mt-12">
+                    <div class="flex flex-wrap justify-center gap-8 text-white/80">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-clock text-green-400 text-xl animate-pulse-soft"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">< 24h</div>
+                                <div class="text-xs">Temps de réponse</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-phone-volume text-blue-400 text-xl animate-phone-ring"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">100%</div>
+                                <div class="text-xs">Appels traités</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-smile text-yellow-400 text-xl animate-pulse-soft"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">98%</div>
+                                <div class="text-xs">Satisfaction</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-users text-purple-400 text-xl animate-contact-invite"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">15</div>
+                                <div class="text-xs">Conseillers</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <!-- Particules de communication -->
+        <div class="floating-particle particle-phone opacity-20">
+            <i class="fas fa-mobile-alt text-green-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-email opacity-25">
+            <i class="fas fa-envelope text-blue-300 text-4xl"></i>
+        </div>
+        <div class="floating-particle particle-chat opacity-20">
+            <i class="fas fa-comments text-purple-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-location opacity-25">
+            <i class="fas fa-map-marker-alt text-red-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-calendar opacity-15">
+            <i class="fas fa-calendar-check text-yellow-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-support opacity-20">
+            <i class="fas fa-headset text-indigo-300 text-3xl"></i>
+        </div>
+
+        <!-- Lignes de connexion communication -->
+        <div class="connection-line connection-1"></div>
+        <div class="connection-line connection-2"></div>
+        <div class="connection-line connection-3"></div>
+
+        <!-- Éléments décoratifs communication -->
+        <div class="absolute top-1/4 left-1/4 opacity-5">
+            <i class="fas fa-satellite-dish text-white text-8xl animate-signal-waves" style="animation-delay: 2s;"></i>
+        </div>
+        <div class="absolute bottom-1/3 right-1/4 opacity-5">
+            <i class="fas fa-broadcast-tower text-white text-6xl animate-phone-ring" style="animation-delay: 4s;"></i>
         </div>
     </section>
 

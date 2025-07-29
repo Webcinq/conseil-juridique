@@ -341,13 +341,18 @@
                 <div class="animate-fade-in-up animate-delay-600 opacity-0">
                     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                         <button class="glass-effect-red text-white px-8 py-4 rounded-full font-semibold text-lg hover-lift animate-glow group">
+                            <a href="{{route('contact')}}">
+
                             <i class="fas fa-user-plus mr-2 group-hover:rotate-12 transition-transform"></i>
                             Optimisez vos RH
+                            </a>
                             <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </button>
                         <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-red-800 transition-all duration-300 hover-lift">
+                            <a href="{{route('contact')}}">
                             <i class="fas fa-handshake mr-2"></i>
                             Audit RH gratuit
+                            </a>
                         </button>
                     </div>
                 </div>

@@ -4,22 +4,528 @@
 @section('meta_description', 'Découvrez notre cabinet d\'expertise comptable et juridique à Marrakech. Plus de 25 ans d\'expérience au service des entreprises, TPE, PME et professions libérales.')
 
 @section('content')
+ <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-12px) rotate(2deg);
+            }
+        }
+
+        @keyframes buildingGrow {
+            0%, 100% {
+                transform: scale(1) translateY(0px);
+            }
+            50% {
+                transform: scale(1.08) translateY(-5px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes elegantGlow {
+            0%, 100% {
+                box-shadow: 0 0 30px rgba(156, 163, 175, 0.3);
+                filter: brightness(1);
+            }
+            50% {
+                box-shadow: 0 0 50px rgba(156, 163, 175, 0.5);
+                filter: brightness(1.1);
+            }
+        }
+
+        @keyframes experienceCounter {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes historyFlow {
+            0% {
+                opacity: 0.3;
+                transform: translateX(-50px);
+            }
+            50% {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+            100% {
+                opacity: 0.3;
+                transform: translateX(50px);
+            }
+        }
+
+        @keyframes prestigeShimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        .hero-section {
+            position: relative;
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(55, 65, 81, 0.9), rgba(17, 24, 39, 0.95)),
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            padding:20px;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .animate-building-grow {
+            animation: buildingGrow 4s ease-in-out infinite;
+        }
+
+        .animate-pulse-soft {
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .animate-elegant-glow {
+            animation: elegantGlow 4s ease-in-out infinite;
+        }
+
+        .animate-experience-counter {
+            animation: experienceCounter 2s ease-out forwards;
+        }
+
+        .animate-history-flow {
+            animation: historyFlow 6s ease-in-out infinite;
+        }
+
+        .animate-prestige-shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            background-size: 200% 100%;
+            animation: prestigeShimmer 3s infinite;
+        }
+
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .animate-delay-400 {
+            animation-delay: 0.4s;
+        }
+
+        .animate-delay-600 {
+            animation-delay: 0.6s;
+        }
+
+        .animate-delay-800 {
+            animation-delay: 0.8s;
+        }
+
+        .animate-delay-1000 {
+            animation-delay: 1s;
+        }
+
+        .text-shadow {
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .glass-effect-dark {
+            backdrop-filter: blur(15px);
+            background: rgba(55, 65, 81, 0.3);
+            border: 1px solid rgba(156, 163, 175, 0.3);
+        }
+
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Particules d'expertise et prestige */
+        .floating-particle {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .particle-building {
+            top: 15%;
+            left: 8%;
+            animation: buildingGrow 6s ease-in-out infinite;
+        }
+
+        .particle-award {
+            top: 20%;
+            right: 10%;
+            animation: float 5s ease-in-out infinite reverse;
+            animation-delay: 1s;
+        }
+
+        .particle-handshake {
+            bottom: 30%;
+            left: 12%;
+            animation: historyFlow 7s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        .particle-star {
+            bottom: 25%;
+            right: 8%;
+            animation: pulse 3s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+
+        .particle-expertise {
+            top: 40%;
+            left: 5%;
+            animation: float 6s ease-in-out infinite;
+            animation-delay: 3s;
+        }
+
+        .particle-growth {
+            top: 35%;
+            right: 15%;
+            animation: experienceCounter 4s ease-in-out infinite;
+            animation-delay: 1.5s;
+        }
+
+        /* Lignes temporelles */
+        .timeline-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(156, 163, 175, 0.4), transparent);
+            animation: historyFlow 8s ease-in-out infinite;
+        }
+
+        .timeline-1 {
+            top: 30%;
+            left: 10%;
+            width: 25%;
+            transform: rotate(15deg);
+        }
+
+        .timeline-2 {
+            bottom: 40%;
+            right: 15%;
+            width: 30%;
+            transform: rotate(-30deg);
+            animation-delay: 2s;
+        }
+
+        .timeline-3 {
+            top: 65%;
+            left: 20%;
+            width: 20%;
+            transform: rotate(45deg);
+            animation-delay: 4s;
+        }
+
+        /* Années d'expérience */
+        .experience-badge {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: prestigeShimmer 4s infinite;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                background-attachment: scroll;
+            }
+        }
+    </style>
 <!-- Hero Section -->
-<section class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20">
-    <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                À Propos de Notre Cabinet
-            </h1>
-            <p class="text-xl md:text-2xl mb-8 text-gray-100">
-                Plus de 25 ans d'expertise au service de votre réussite
-            </p>
+ <div class="bg-gray-50 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex items-center space-x-2 text-sm">
+                <a href="{{route('accueil')}}" class="text-gray-600 hover:text-gray-800">Accueil</a>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <span class="text-gray-600">À Propos</span>
+            </nav>
         </div>
     </div>
-</section>
+ <section class="hero-section flex items-center justify-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="hero-content text-center">
+                <!-- Icône prestige avec building -->
+                <div class="animate-fade-in-up opacity-0">
+                    <div class="w-32 h-32 glass-effect-dark rounded-xl flex items-center justify-center mx-auto mb-8 animate-building-grow hover-lift animate-elegant-glow relative">
+                        <i class="fas fa-building text-gray-300 text-6xl drop-shadow-lg"></i>
+                        <!-- Badge d'excellence -->
+                        <div class="absolute -top-3 -right-3 w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-crown text-white text-sm animate-pulse-soft"></i>
+                        </div>
+                        <!-- Étoiles de prestige -->
+                        <div class="absolute -bottom-2 -left-2 flex space-x-1">
+                            <i class="fas fa-star text-yellow-400 text-xs animate-pulse-soft"></i>
+                            <i class="fas fa-star text-yellow-400 text-xs animate-pulse-soft" style="animation-delay: 0.2s;"></i>
+                            <i class="fas fa-star text-yellow-400 text-xs animate-pulse-soft" style="animation-delay: 0.4s;"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Titre principal -->
+                <div class="animate-fade-in-up animate-delay-200 opacity-0">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 text-shadow leading-tight">
+                        <span class="text-gray-200 animate-pulse-soft">À Propos</span>
+                        <br>
+                        <span class="text-3xl md:text-5xl lg:text-6xl text-gray-300">
+                            de Notre Cabinet
+                        </span>
+                    </h1>
+                </div>
+                
+                <!-- Badge d'expérience spectaculaire -->
+                <div class="animate-fade-in-up animate-delay-400 opacity-0">
+                    <div class="max-w-4xl mx-auto mb-10">
+                        <div class="glass-effect-dark p-6 rounded-2xl hover-lift experience-badge">
+                            <div class="flex items-center justify-center space-x-4">
+                                <div class="text-center">
+                                    <div class="text-7xl md:text-8xl font-bold text-yellow-400 animate-experience-counter leading-none">
+                                        25+
+                                    </div>
+                                    <div class="text-xl md:text-2xl text-gray-100 font-semibold">
+                                        années d'expertise
+                                    </div>
+                                </div>
+                                <div class="hidden md:block w-px h-20 bg-gray-500"></div>
+                                <div class="text-center">
+                                    <p class="text-lg md:text-xl text-gray-200 leading-relaxed">
+                                        au service de votre <strong>réussite</strong>
+                                    </p>
+                                    <div class="flex justify-center space-x-2 mt-2">
+                                        <i class="fas fa-medal text-yellow-400 animate-pulse-soft"></i>
+                                        <i class="fas fa-trophy text-yellow-400 animate-pulse-soft" style="animation-delay: 0.3s;"></i>
+                                        <i class="fas fa-award text-yellow-400 animate-pulse-soft" style="animation-delay: 0.6s;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Valeurs du cabinet -->
+                <div class="animate-fade-in-up animate-delay-600 opacity-0 mb-10">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                        <div class="glass-effect p-6 rounded-lg hover-lift">
+                            <i class="fas fa-shield-alt text-blue-400 text-3xl mb-3 animate-elegant-glow"></i>
+                            <h3 class="text-white font-bold text-lg mb-2">Confiance</h3>
+                            <p class="text-gray-300 text-sm">Un partenaire fiable depuis 1999</p>
+                        </div>
+                        <div class="glass-effect p-6 rounded-lg hover-lift">
+                            <i class="fas fa-lightbulb text-yellow-400 text-3xl mb-3 animate-elegant-glow"></i>
+                            <h3 class="text-white font-bold text-lg mb-2">Innovation</h3>
+                            <p class="text-gray-300 text-sm">Solutions modernes et adaptées</p>
+                        </div>
+                        <div class="glass-effect p-6 rounded-lg hover-lift">
+                            <i class="fas fa-heart text-red-400 text-3xl mb-3 animate-elegant-glow"></i>
+                            <h3 class="text-white font-bold text-lg mb-2">Proximité</h3>
+                            <p class="text-gray-300 text-sm">Accompagnement personnalisé</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Boutons d'action -->
+                <div class="animate-fade-in-up animate-delay-600 opacity-0">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                                                    <a href="#team">
+
+                        <button class="glass-effect-dark text-white px-8 py-4 rounded-full font-semibold text-lg hover-lift animate-elegant-glow group">
+                            <i class="fas fa-users mr-2 group-hover:rotate-12 transition-transform"></i>
+                            Découvrez notre équipe
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                            </a>
+                                                                                    <a href="#hisory">
+
+
+                        <button class="border-2 border-gray-300 text-gray-300 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-300 hover:text-gray-900 transition-all duration-300 hover-lift">
+
+                            <i class="fas fa-history mr-2"></i>
+                            Notre histoire
+                        </button>
+                                                    </a>
+
+                    </div>
+                </div>
+
+                <!-- Milestones historiques -->
+                <div class="animate-fade-in-up animate-delay-800 opacity-0 mb-8">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                        <div class="glass-effect p-4 rounded-lg hover-lift text-center">
+                            <div class="text-2xl font-bold text-yellow-400 animate-history-flow">1999</div>
+                            <div class="text-xs text-gray-300">Création</div>
+                        </div>
+                        <div class="glass-effect p-4 rounded-lg hover-lift text-center">
+                            <div class="text-2xl font-bold text-blue-400 animate-history-flow" style="animation-delay: 1s;">2005</div>
+                            <div class="text-xs text-gray-300">Expansion</div>
+                        </div>
+                        <div class="glass-effect p-4 rounded-lg hover-lift text-center">
+                            <div class="text-2xl font-bold text-green-400 animate-history-flow" style="animation-delay: 2s;">2015</div>
+                            <div class="text-xs text-gray-300">Digitalisation</div>
+                        </div>
+                        <div class="glass-effect p-4 rounded-lg hover-lift text-center">
+                            <div class="text-2xl font-bold text-purple-400 animate-history-flow" style="animation-delay: 3s;">2024</div>
+                            <div class="text-xs text-gray-300">Innovation</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message de prestige -->
+                <div class="animate-fade-in-up animate-delay-1000 opacity-0">
+                    <div class="glass-effect border-l-4 border-yellow-400 p-6 max-w-3xl mx-auto rounded-lg">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-quote-left text-yellow-400 text-2xl mr-4"></i>
+                            <div class="text-center">
+                                <h3 class="text-white font-bold text-lg mb-2">L'excellence au service de votre ambition</h3>
+                                <p class="text-gray-300 text-base italic">
+                                    "Depuis plus de deux décennies, nous accompagnons les entrepreneurs dans leurs défis les plus importants, 
+                                    avec la passion de l'excellence et l'engagement de la réussite partagée."
+                                </p>
+                            </div>
+                            <i class="fas fa-quote-right text-yellow-400 text-2xl ml-4"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats de prestige -->
+                <div class="animate-fade-in-up animate-delay-1000 opacity-0 mt-12">
+                    <div class="flex flex-wrap justify-center gap-8 text-gray-400">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-users text-blue-400 text-xl animate-elegant-glow"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">2500+</div>
+                                <div class="text-xs">Clients de confiance</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-trophy text-yellow-400 text-xl animate-elegant-glow"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">15</div>
+                                <div class="text-xs">Prix & distinctions</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-globe text-green-400 text-xl animate-elegant-glow"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">3</div>
+                                <div class="text-xs">Bureaux</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-user-tie text-purple-400 text-xl animate-elegant-glow"></i>
+                            <div class="text-left">
+                                <div class="text-lg font-bold text-white">35</div>
+                                <div class="text-xs">Experts dédiés</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Particules de prestige -->
+        <div class="floating-particle particle-building opacity-15">
+            <i class="fas fa-university text-gray-400 text-4xl"></i>
+        </div>
+        <div class="floating-particle particle-award opacity-20">
+            <i class="fas fa-award text-yellow-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-handshake opacity-15">
+            <i class="fas fa-handshake text-blue-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-star opacity-20">
+            <i class="fas fa-star text-yellow-300 text-2xl"></i>
+        </div>
+        <div class="floating-particle particle-expertise opacity-15">
+            <i class="fas fa-graduation-cap text-purple-300 text-3xl"></i>
+        </div>
+        <div class="floating-particle particle-growth opacity-20">
+            <i class="fas fa-chart-line text-green-300 text-3xl"></i>
+        </div>
+
+        <!-- Lignes temporelles -->
+        <div class="timeline-line timeline-1"></div>
+        <div class="timeline-line timeline-2"></div>
+        <div class="timeline-line timeline-3"></div>
+
+        <!-- Éléments décoratifs prestigieux -->
+        <div class="absolute top-1/4 left-1/4 opacity-5">
+            <i class="fas fa-landmark text-white text-8xl animate-building-grow" style="animation-delay: 2s;"></i>
+        </div>
+        <div class="absolute bottom-1/3 right-1/4 opacity-5">
+            <i class="fas fa-balance-scale text-white text-6xl animate-history-flow" style="animation-delay: 4s;"></i>
+        </div>
+    </section>
 
 <!-- Notre Histoire -->
-<section class="py-20">
+<section class="py-20" id="hisory">
     <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -210,7 +716,7 @@
 </section>
 
 <!-- Notre Équipe -->
-<section class="py-20 bg-gray-50">
+<section class="py-20 bg-gray-50" id="team">
     <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-16 text-gray-800">Notre Équipe</h2>
