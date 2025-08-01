@@ -341,34 +341,7 @@
                     </h1>
                 </div>
                 
-                <!-- Badge d'expérience spectaculaire -->
-                <div class="animate-fade-in-up animate-delay-400 opacity-0">
-                    <div class="max-w-4xl mx-auto mb-10">
-                        <div class="glass-effect-dark p-6 rounded-2xl hover-lift experience-badge">
-                            <div class="flex items-center justify-center space-x-4">
-                                <div class="text-center">
-                                    <div class="text-7xl md:text-8xl font-bold text-yellow-400 animate-experience-counter leading-none">
-                                        25+
-                                    </div>
-                                    <div class="text-xl md:text-2xl text-gray-100 font-semibold">
-                                        années d'expertise
-                                    </div>
-                                </div>
-                                <div class="hidden md:block w-px h-20 bg-gray-500"></div>
-                                <div class="text-center">
-                                    <p class="text-lg md:text-xl text-gray-200 leading-relaxed">
-                                        au service de votre <strong>réussite</strong>
-                                    </p>
-                                    <div class="flex justify-center space-x-2 mt-2">
-                                        <i class="fas fa-medal text-yellow-400 animate-pulse-soft"></i>
-                                        <i class="fas fa-trophy text-yellow-400 animate-pulse-soft" style="animation-delay: 0.3s;"></i>
-                                        <i class="fas fa-award text-yellow-400 animate-pulse-soft" style="animation-delay: 0.6s;"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          
 
                 <!-- Valeurs du cabinet -->
                 <div class="animate-fade-in-up animate-delay-600 opacity-0 mb-10">
@@ -416,26 +389,7 @@
                 </div>
 
                 <!-- Milestones historiques -->
-                <div class="animate-fade-in-up animate-delay-800 opacity-0 mb-8">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-                        <div class="glass-effect p-4 rounded-lg hover-lift text-center">
-                            <div class="text-2xl font-bold text-yellow-400 animate-history-flow">1999</div>
-                            <div class="text-xs text-gray-300">Création</div>
-                        </div>
-                        <div class="glass-effect p-4 rounded-lg hover-lift text-center">
-                            <div class="text-2xl font-bold text-blue-400 animate-history-flow" style="animation-delay: 1s;">2005</div>
-                            <div class="text-xs text-gray-300">Expansion</div>
-                        </div>
-                        <div class="glass-effect p-4 rounded-lg hover-lift text-center">
-                            <div class="text-2xl font-bold text-green-400 animate-history-flow" style="animation-delay: 2s;">2015</div>
-                            <div class="text-xs text-gray-300">Digitalisation</div>
-                        </div>
-                        <div class="glass-effect p-4 rounded-lg hover-lift text-center">
-                            <div class="text-2xl font-bold text-purple-400 animate-history-flow" style="animation-delay: 3s;">2024</div>
-                            <div class="text-xs text-gray-300">Innovation</div>
-                        </div>
-                    </div>
-                </div>
+             
 
                 <!-- Message de prestige -->
                 <div class="animate-fade-in-up animate-delay-1000 opacity-0">

@@ -6,10 +6,10 @@
             <div class="flex items-center">
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('accueil') }}" class="flex items-center">
-                   <div class="w-10 h-10  rounded-lg flex items-center justify-center" >
-                        <img src="{{asset('img/global-gestion-logo-01.png')}}" alt="Logo IMH" class="w-8 h-8 object-contain">
+                   <div class="w-12 h-12  rounded-lg flex items-center justify-center" >
+                        <img src="{{asset('img/global-gestion-logo-01.png')}}" alt="Logo IMH" class="w-12 h-12 object-contain">
                     </div>
-             <span class="ml-1 text-xl font-bold">
+             <span class="ml-1 text-2xl font-bold">
     <span style="color: #245fa0;">Global</span> 
     <span style="color: #fe7a36;">Gestion</span><sup style="color: #fe7a36;">+</sup>
 </span>
@@ -65,17 +65,14 @@
                         Blog
                     </a>
                     
-                    <a href="{{ route('contact') }}" 
-                       class="@if(request()->routeIs('contact')) text-custom-blue @else text-gray-700 @endif hover:text-custom-blue px-3 py-2 text-sm font-medium transition-colors">
-                        Contact
-                    </a>
+                
                 </div>
             </div>
             
             <!-- CTA Button -->
             <div class="hidden md:flex items-center space-x-4">
                 <a href="{{ route('contact') }}" class="bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
-                    Prendres RDV
+                    Contact
                 </a>
             </div>
             
@@ -107,7 +104,6 @@
                 <a href="{{ route('about') }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-custom-blue">À propos</a>
                 <a href="{{ route('blog.index') }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-custom-blue">Blog</a>
                 <a href="{{ route('contact') }}" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-custom-blue">Contact</a>
-                <a href="{{ route('contact') }}" class="block px-3 py-2 text-base font-medium bg-blue-600 text-white rounded-lg text-center mt-4">Prendre RDV</a>
             </div>
         </div>
     </div>

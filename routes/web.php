@@ -16,9 +16,9 @@
 //     return redirect('/'); // Redirige temporairement vers la landing page
 // })->name('register');
 
-// Route::get('/admin/dashboard', function () {
-//     return view('admin.dashboard');
-// })->name('admin.dashboard');
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard');
+})->name('admin.dashboard');
 
 // Route::get('/student/dashboard', function () {
 //     return view('student.dashboard');
@@ -207,22 +207,22 @@ Route::prefix('api')->group(function () {
     })->name('api.devis-rapide');
 });
 
-// Routes d'administration (si nécessaire)
-Route::prefix('admin')->middleware(['auth'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    })->name('admin.dashboard');
+// // Routes d'administration (si nécessaire)
+// Route::prefix('admin')->middleware(['auth'])->group(function () {
+//     Route::get('/dashboard', function () {
+//         return view('admin.dashboard');
+//     })->name('admin.dashboard');
     
-    Route::get('/contacts', function () {
-        // Afficher la liste des contacts
-        return view('admin.contacts.index');
-    })->name('admin.contacts.index');
+//     Route::get('/contacts', function () {
+//         // Afficher la liste des contacts
+//         return view('admin.contacts.index');
+//     })->name('admin.contacts.index');
     
-    Route::get('/blog', function () {
-        // Gestion des articles de blog
-        return view('admin.blog.index');
-    })->name('admin.blog.index');
-});
+//     Route::get('/blog', function () {
+//         // Gestion des articles de blog
+//         return view('admin.blog.index');
+//     })->name('admin.blog.index');
+// });
 
 // Routes pour l'authentification (si nécessaire)
 // Route::get('/login', function () {

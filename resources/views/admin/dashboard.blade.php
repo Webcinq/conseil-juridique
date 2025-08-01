@@ -95,7 +95,7 @@
         <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-200">
             <div class="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
                 <h3 class="text-lg font-semibold text-gray-900">Recent Students</h3>
-                <a href="{{ route('landing') }}" class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                <a href="{{ route('accueil') }}" class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200">
                     View All Students
                 </a>
             </div>
